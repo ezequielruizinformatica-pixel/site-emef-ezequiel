@@ -13,9 +13,9 @@
 /* ========================= */
 
 :root {
-    --cor-primaria: #2c3e50;   /* Azul escuro institucional */
-    --cor-secundaria: #f4f6f7; /* Cinza claro suave */
-    --cor-destaque: #d4ac0d;   /* Dourado suave */
+    --cor-primaria: #2c3e50;
+    --cor-secundaria: #f4f6f7;
+    --cor-destaque: #d4ac0d;
 }
 
 body {
@@ -35,15 +35,14 @@ header {
 }
 
 header h1 {
-    background-color: #2e8b57; /* Verde institucional mais elegante */
+    background-color: #2e8b57;
     color: white;
     padding: 10px;
     border-radius: 8px;
 }
 
-/* 🔵 TEXTO DO SLOGAN EM BRANCO */
 header p {
-    color: white; /* ALTERADO PARA BRANCO */
+    color: white;
     font-size: 18px;
 }
 
@@ -73,8 +72,8 @@ nav a:hover {
 /* ========================= */
 
 .banner {
-    height: 400px;
-    background-image: url('fundo.jpeg'); /* IMAGEM NO REPOSITÓRIO */
+    height: 450px; /* AUMENTADO */
+    background-image: url('fundo.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -83,18 +82,29 @@ nav a:hover {
     align-items: center;
 }
 
+/* TEXTO DO BANNER MAIS EXPANDIDO E MAIS TRANSPARENTE */
 .banner-texto {
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.4); /* MAIS TRANSPARENTE */
     color: white;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 40px; /* MAIS ESPAÇO */
+    border-radius: 15px;
+    width: 80%; /* MAIS EXPANDIDO */
+    max-width: 800px;
+}
+
+.banner-texto h2 {
+    font-size: 32px; /* TEXTO MAIOR */
+    margin-bottom: 15px;
+}
+
+.banner-texto p {
+    font-size: 20px;
 }
 
 /* ========================= */
 /* H2 CORES SUAVES ESCOLARES */
 /* ========================= */
 
-/* SOBRE - Azul acinzentado suave */
 #sobre h2 {
     background-color: #5d6d7e;
     color: white;
@@ -102,7 +112,6 @@ nav a:hover {
     border-radius: 8px;
 }
 
-/* ENSINO - Verde oliva suave */
 #ensino h2 {
     background-color: #7d8f69;
     color: white;
@@ -110,7 +119,6 @@ nav a:hover {
     border-radius: 8px;
 }
 
-/* CONTATO - Bege institucional */
 #contato h2 {
     background-color: #a89f91;
     color: white;
@@ -128,6 +136,20 @@ nav a:hover {
 }
 
 /* ========================= */
+/* LINKS DE CONTATO */
+/* ========================= */
+
+.container a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.container a:hover {
+    color: #d4ac0d;
+}
+
+/* ========================= */
 /* RODAPÉ */
 /* ========================= */
 
@@ -139,29 +161,51 @@ footer {
 }
 
 /* ========================= */
-/* BOTÃO FLUTUANTE WHATSAPP */
+/* BOTÕES FLUTUANTES */
 /* ========================= */
 
+/* WHATSAPP */
 .whatsapp-fixo {
     position: fixed;
-    bottom: 20px;   /* Distância do fundo */
-    right: 20px;    /* Distância da direita */
+    bottom: 20px;
+    right: 20px;
     background-color: #25d366;
     color: white;
     border-radius: 50%;
     width: 60px;
     height: 60px;
     text-align: center;
-    font-size: 30px;
+    font-size: 28px;
     line-height: 60px;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
     text-decoration: none;
     z-index: 1000;
 }
 
-/* Efeito ao passar o mouse */
 .whatsapp-fixo:hover {
     background-color: #1ebe5d;
+}
+
+/* INSTAGRAM (ACIMA DO WHATSAPP) */
+.instagram-fixo {
+    position: fixed;
+    bottom: 95px; /* FICA ACIMA DO WHATSAPP */
+    right: 20px;
+    background-color: #E1306C;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 60px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.instagram-fixo:hover {
+    background-color: #c72c61;
 }
 
 /* ========================= */
@@ -171,11 +215,12 @@ footer {
 @media (max-width: 768px) {
 
     .banner {
-        height: 250px;
+        height: 300px;
     }
 
     .banner-texto {
-        padding: 10px;
+        width: 90%;
+        padding: 20px;
     }
 
 }
@@ -224,27 +269,41 @@ footer {
 
 <section id="contato" class="container">
     <h2>Contato</h2>
-    <p>Email: emefezequielruizii@gmail.com</p>
+
+    <!-- EMAIL COM REDIRECIONAMENTO AUTOMÁTICO -->
+    <!-- Pode alterar assunto e mensagem dentro do mailto -->
+    <p>Email: 
+        <a href="mailto:emefezequielruizii@gmail.com?subject=Contato%20pelo%20site&body=Olá,%20gostaria%20de%20mais%20informações.">
+            emefezequielruizii@gmail.com
+        </a>
+    </p>
+
     <p>Telefone: (92) 9224-4445</p>
-    <p>Endereço: Rua Barroso</p>
+
+    <!-- INSTAGRAM NA SEÇÃO CONTATO -->
+    <p>Instagram: 
+        <a href="https://www.instagram.com/emef.ezequielruizii?igsh=OXlraWN4N2JvcG1x" target="_blank">
+            @emef.ezequielruizii
+        </a>
+    </p>
+
+    <p>Endereço: Rua Barroso, Comunidade Bela Vista, Manacapuru-AM</p>
 </section>
 
 <footer>
     <p>&copy; 2026 - EMEF Ezequiel Ruiz II - Todos os direitos reservados</p>
 </footer>
 
-<!-- ========================= -->
-<!-- BOTÃO FLUTUANTE WHATSAPP -->
-<!-- ========================= -->
+<!-- BOTÃO INSTAGRAM FLUTUANTE -->
+<a href="https://www.instagram.com/emef.ezequielruizii?igsh=OXlraWN4N2JvcG1x"
+   class="instagram-fixo"
+   target="_blank">
+   📷
+</a>
 
-<!-- 
-LINK DO WHATSAPP:
-Substitua 559292244445 pelo número correto.
-Formato: 55 + DDD + número (sem espaços ou traços)
--->
-
-<a href="https://wa.me/559292244445" 
-   class="whatsapp-fixo" 
+<!-- BOTÃO WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/559292244445"
+   class="whatsapp-fixo"
    target="_blank">
    💬
 </a>
