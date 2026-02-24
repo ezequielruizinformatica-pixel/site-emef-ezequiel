@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- 🔵 NOME DA ABA -->
+<title>EMEF Ezequiel Ruiz II</title>
+
+<style>
+
+/* ========================= */
+/* CONFIGURAÇÕES GERAIS */
+/* ========================= */
+
+/* 🔵 CORES PRINCIPAIS (PODE ALTERAR) */
+:root {
+    --cor-primaria: #003366;
+    --cor-secundaria: #f4f4f4;
+    --cor-destaque: #ffcc00;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor-secundaria);
+}
+
+/* ========================= */
+/* CABEÇALHO */
+/* ========================= */
+header {
+    background-color: var(--cor-primaria);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ========================= */
+/* MENU */
+/* ========================= */
+nav {
+    background-color: #001f3f;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--cor-destaque);
+}
+
+/* ========================= */
+/* BANNER COM IMAGEM */
+/* ========================= */
+
+/* 🔴 IMPORTANTE:
+   Troque o link abaixo pelo link da sua imagem JPEG.
+   Você pode subir a imagem no GitHub clicando em:
+   Add file → Upload files
+*/
+
+.banner {
+    height: 400px;
+    background-image: url('https://via.placeholder.com/1200x400');
+    /* 🔵 COLOQUE AQUI O LINK DA SUA IMAGEM */
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Texto sobre a imagem */
+.banner-texto {
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* ========================= */
+/* CONTEÚDO */
+/* ========================= */
+.container {
+    padding: 40px;
+    text-align: center;
+}
+
+/* ========================= */
+/* RODAPÉ */
+/* ========================= */
+footer {
+    background-color: var(--cor-primaria);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+@media (max-width: 768px) {
+    .banner {
+        height: 250px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>EMEF Ezequiel Ruiz II</h1>
+    <p>Educação com qualidade e compromisso com o futuro</p>
+</header>
+
+<nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#ensino">Ensino</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<section class="banner">
+    <div class="banner-texto">
+        <h2>Bem-vindos à nossa escola</h2>
+        <p>Construindo conhecimento todos os dias</p>
+    </div>
+</section>
+
+<section id="sobre" class="container">
+    <h2>Sobre a Escola</h2>
+    <p>
+        A EMEF Ezequiel Ruiz II é uma instituição comprometida
+        com a formação integral dos estudantes,
+        promovendo educação de qualidade e cidadania.
+    </p>
+</section>
+
+<section id="ensino" class="container">
+    <h2>Ensino Oferecido</h2>
+    <ul>
+        <li>Ensino Fundamental I</li>
+        <li>Ensino Fundamental II</li>
+        <li>Projetos Culturais</li>
+        <li>Atividades Esportivas</li>
+    </ul>
+</section>
+
+<section id="contato" class="container">
+    <h2>Contato</h2>
+    <p>Email: contato@emef.com</p>
+    <p>Telefone: (00) 0000-0000</p>
+    <p>Endereço: Rua Exemplo, 123 - Cidade</p>
+</section>
+
+<footer>
+    <p>&copy; 2026 - EMEF Ezequiel Ruiz II - Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
