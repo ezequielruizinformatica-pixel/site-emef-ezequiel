@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- 🔵 NOME DA ABA -->
+<title>EMEF Ezequiel Ruiz II</title>
+
 <style>
 
 /* ========================= */
@@ -28,7 +37,7 @@ header {
 
 /* 🔴 H1 COM FUNDO VERDE */
 header h1 {
-    background-color: green; /* 🔵 ALTERE AQUI A COR DO FUNDO DO H1 */
+    background-color: green; /* 🔵 ALTERE AQUI SE QUISER OUTRO TOM */
     color: white;
     padding: 10px;
     border-radius: 8px;
@@ -55,12 +64,15 @@ nav a:hover {
 }
 
 /* ========================= */
-/* BANNER */
+/* BANNER COM IMAGEM */
 /* ========================= */
+
 .banner {
     height: 400px;
 
-    background-image: url('fundo.jpeg'); /* 🔵 ALTERE SE NECESSÁRIO */
+    /* 🔴 IMAGEM DENTRO DO REPOSITÓRIO */
+    /* Se mudar o nome do arquivo, altere aqui */
+    background-image: url('fundo.jpeg');
 
     background-size: cover;
     background-position: center;
@@ -71,6 +83,7 @@ nav a:hover {
     align-items: center;
 }
 
+/* TEXTO SOBRE A IMAGEM */
 .banner-texto {
     background-color: rgba(0,0,0,0.6);
     color: white;
@@ -82,21 +95,21 @@ nav a:hover {
 /* H2 COM CORES DIFERENTES */
 /* ========================= */
 
-/* 🔵 Sobre */
+/* 🔵 SOBRE */
 #sobre h2 {
     background-color: #ff9999; /* 🔵 ALTERE A COR */
     padding: 10px;
     border-radius: 8px;
 }
 
-/* 🔵 Ensino */
+/* 🔵 ENSINO */
 #ensino h2 {
     background-color: #99ccff; /* 🔵 ALTERE A COR */
     padding: 10px;
     border-radius: 8px;
 }
 
-/* 🔵 Contato */
+/* 🔵 CONTATO */
 #contato h2 {
     background-color: #99ff99; /* 🔵 ALTERE A COR */
     padding: 10px;
@@ -127,7 +140,7 @@ footer {
 @media (max-width: 768px) {
 
     .banner {
-        height: 250px;
+        height: 250px; /* 🔵 ALTURA NO CELULAR */
     }
 
     .banner-texto {
@@ -136,3 +149,57 @@ footer {
 }
 
 </style>
+</head>
+
+<body>
+
+<header>
+    <h1>EMEF Ezequiel Ruiz II</h1>
+    <p>Educação com qualidade e compromisso com o futuro</p>
+</header>
+
+<nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#ensino">Ensino</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<section class="banner">
+    <div class="banner-texto">
+        <h2>Bem-vindos à nossa escola</h2>
+        <p>Construindo conhecimento todos os dias</p>
+    </div>
+</section>
+
+<section id="sobre" class="container">
+    <h2>Sobre a Escola</h2>
+    <p>
+        A EMEF Ezequiel Ruiz II é uma instituição pública comprometida
+        com a formação integral dos estudantes, promovendo educação
+        de qualidade e cidadania.
+    </p>
+</section>
+
+<section id="ensino" class="container">
+    <h2>Ensino Oferecido</h2>
+    <ul>
+        <li>Ensino Fundamental I</li>
+        <li>Ensino Fundamental II</li>
+        <li>Projetos Culturais</li>
+        <li>Atividades Esportivas</li>
+    </ul>
+</section>
+
+<section id="contato" class="container">
+    <h2>Contato</h2>
+    <p>Email: contato@emef.com</p>
+    <p>Telefone: (00) 0000-0000</p>
+    <p>Endereço: Rua Exemplo, 123 - Cidade</p>
+</section>
+
+<footer>
+    <p>&copy; 2026 - EMEF Ezequiel Ruiz II - Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
