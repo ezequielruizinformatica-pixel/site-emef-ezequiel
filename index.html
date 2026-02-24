@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- 🔵 NOME DA ABA -->
 <title>EMEF Ezequiel Ruiz II</title>
 
 <style>
@@ -13,11 +12,10 @@
 /* CONFIGURAÇÕES GERAIS */
 /* ========================= */
 
-/* 🔵 CORES PRINCIPAIS (PODE ALTERAR) */
 :root {
-    --cor-primaria: #003366;
-    --cor-secundaria: #f4f4f4;
-    --cor-destaque: #ffcc00;
+    --cor-primaria: #2c3e50;   /* Azul escuro institucional */
+    --cor-secundaria: #f4f6f7; /* Cinza claro suave */
+    --cor-destaque: #d4ac0d;   /* Dourado suave */
 }
 
 body {
@@ -29,25 +27,32 @@ body {
 /* ========================= */
 /* CABEÇALHO */
 /* ========================= */
+
 header {
     background-color: var(--cor-primaria);
     text-align: center;
     padding: 20px;
 }
 
-/* 🔴 H1 COM FUNDO VERDE */
 header h1 {
-    background-color: green; /* 🔵 ALTERE AQUI SE QUISER OUTRO TOM */
+    background-color: #2e8b57; /* Verde institucional mais elegante */
     color: white;
     padding: 10px;
     border-radius: 8px;
 }
 
+/* 🔵 TEXTO DO SLOGAN EM BRANCO */
+header p {
+    color: white; /* ALTERADO PARA BRANCO */
+    font-size: 18px;
+}
+
 /* ========================= */
 /* MENU */
 /* ========================= */
+
 nav {
-    background-color: #001f3f;
+    background-color: #1f2d3a;
     text-align: center;
     padding: 10px;
 }
@@ -64,26 +69,20 @@ nav a:hover {
 }
 
 /* ========================= */
-/* BANNER COM IMAGEM */
+/* BANNER */
 /* ========================= */
 
 .banner {
     height: 400px;
-
-    /* 🔴 IMAGEM DENTRO DO REPOSITÓRIO */
-    /* Se mudar o nome do arquivo, altere aqui */
-    background-image: url('fundo.jpeg');
-
+    background-image: url('fundo.jpeg'); /* IMAGEM NO REPOSITÓRIO */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* TEXTO SOBRE A IMAGEM */
 .banner-texto {
     background-color: rgba(0,0,0,0.6);
     color: white;
@@ -92,26 +91,29 @@ nav a:hover {
 }
 
 /* ========================= */
-/* H2 COM CORES DIFERENTES */
+/* H2 CORES SUAVES ESCOLARES */
 /* ========================= */
 
-/* 🔵 SOBRE */
+/* SOBRE - Azul acinzentado suave */
 #sobre h2 {
-    background-color: #ff9999; /* 🔵 ALTERE A COR */
+    background-color: #5d6d7e;
+    color: white;
     padding: 10px;
     border-radius: 8px;
 }
 
-/* 🔵 ENSINO */
+/* ENSINO - Verde oliva suave */
 #ensino h2 {
-    background-color: #99ccff; /* 🔵 ALTERE A COR */
+    background-color: #7d8f69;
+    color: white;
     padding: 10px;
     border-radius: 8px;
 }
 
-/* 🔵 CONTATO */
+/* CONTATO - Bege institucional */
 #contato h2 {
-    background-color: #99ff99; /* 🔵 ALTERE A COR */
+    background-color: #a89f91;
+    color: white;
     padding: 10px;
     border-radius: 8px;
 }
@@ -119,6 +121,7 @@ nav a:hover {
 /* ========================= */
 /* CONTEÚDO */
 /* ========================= */
+
 .container {
     padding: 40px;
     text-align: center;
@@ -127,6 +130,7 @@ nav a:hover {
 /* ========================= */
 /* RODAPÉ */
 /* ========================= */
+
 footer {
     background-color: var(--cor-primaria);
     color: white;
@@ -135,17 +139,45 @@ footer {
 }
 
 /* ========================= */
+/* BOTÃO FLUTUANTE WHATSAPP */
+/* ========================= */
+
+.whatsapp-fixo {
+    position: fixed;
+    bottom: 20px;   /* Distância do fundo */
+    right: 20px;    /* Distância da direita */
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    text-decoration: none;
+    z-index: 1000;
+}
+
+/* Efeito ao passar o mouse */
+.whatsapp-fixo:hover {
+    background-color: #1ebe5d;
+}
+
+/* ========================= */
 /* RESPONSIVO */
 /* ========================= */
+
 @media (max-width: 768px) {
 
     .banner {
-        height: 250px; /* 🔵 ALTURA NO CELULAR */
+        height: 250px;
     }
 
     .banner-texto {
         padding: 10px;
     }
+
 }
 
 </style>
@@ -155,7 +187,7 @@ footer {
 
 <header>
     <h1>EMEF Ezequiel Ruiz II</h1>
-    <p> A educação começa em casa a escola lapida.</p>
+    <p>A educação começa em casa a escola lapida.</p>
 </header>
 
 <nav>
@@ -186,20 +218,36 @@ footer {
         <li>Ensino Fundamental I</li>
         <li>Ensino Fundamental II</li>
         <li>Escola de Tempo Integral</li>
-        <li>Projetos de Extenção</li>
+        <li>Projetos de Extensão</li>
     </ul>
 </section>
 
 <section id="contato" class="container">
     <h2>Contato</h2>
-    <p>emefezequielruizii@gmail.com</p>
-    <p>Telefone: (92)9224-4445</p>
-    <p>Endereço: Rua Barroso </p>
+    <p>Email: emefezequielruizii@gmail.com</p>
+    <p>Telefone: (92) 9224-4445</p>
+    <p>Endereço: Rua Barroso</p>
 </section>
 
 <footer>
     <p>&copy; 2026 - EMEF Ezequiel Ruiz II - Todos os direitos reservados</p>
 </footer>
+
+<!-- ========================= -->
+<!-- BOTÃO FLUTUANTE WHATSAPP -->
+<!-- ========================= -->
+
+<!-- 
+LINK DO WHATSAPP:
+Substitua 559292244445 pelo número correto.
+Formato: 55 + DDD + número (sem espaços ou traços)
+-->
+
+<a href="https://wa.me/559292244445" 
+   class="whatsapp-fixo" 
+   target="_blank">
+   💬
+</a>
 
 </body>
 </html>
