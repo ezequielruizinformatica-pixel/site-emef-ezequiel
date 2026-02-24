@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- 🔵 NOME DA ABA -->
+<!-- 🔵 NOME DA ABA DO NAVEGADOR -->
 <title>EMEF Ezequiel Ruiz II</title>
 
 <style>
@@ -57,34 +57,32 @@ nav a:hover {
 }
 
 /* ========================= */
-/* BANNER COM IMAGEM */
+/* BANNER COM IMAGEM DO REPOSITÓRIO */
 /* ========================= */
-
-/* 🔴 IMPORTANTE:
-   Troque o link abaixo pelo link da sua imagem JPEG.
-   Você pode subir a imagem no GitHub clicando em:
-   Add file → Upload files
-*/
 
 .banner {
     height: 400px;
-    background-image: url('https://via.placeholder.com/1200x400');
-    /* 🔵 COLOQUE AQUI O LINK DA SUA IMAGEM */
+
+    /* 🔴 A IMAGEM ESTÁ DENTRO DA PASTA img */
+    /* Se mudar o nome da imagem, altere aqui */
+    background-image: url('fundo.jpeg');
 
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Texto sobre a imagem */
+/* TEXTO SOBRE A IMAGEM */
 .banner-texto {
     background-color: rgba(0,0,0,0.6);
     color: white;
     padding: 20px;
     border-radius: 10px;
+    text-align: center;
 }
 
 /* ========================= */
@@ -109,8 +107,13 @@ footer {
 /* RESPONSIVO */
 /* ========================= */
 @media (max-width: 768px) {
+
     .banner {
-        height: 250px;
+        height: 250px; /* 🔵 ALTURA NO CELULAR */
+    }
+
+    .banner-texto {
+        padding: 10px;
     }
 }
 
@@ -140,9 +143,9 @@ footer {
 <section id="sobre" class="container">
     <h2>Sobre a Escola</h2>
     <p>
-        A EMEF Ezequiel Ruiz II é uma instituição comprometida
-        com a formação integral dos estudantes,
-        promovendo educação de qualidade e cidadania.
+        A EMEF Ezequiel Ruiz II é uma instituição pública comprometida
+        com a formação integral dos estudantes, promovendo educação
+        de qualidade e cidadania.
     </p>
 </section>
 
