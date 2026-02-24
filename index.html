@@ -6,6 +6,9 @@
 
 <title>EMEF Ezequiel Ruiz II</title>
 
+<!-- FONTE MAIS BONITA E MODERNA -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
 <style>
 
 /* ========================= */
@@ -20,7 +23,7 @@
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif; /* FONTE NOVA */
     background-color: var(--cor-secundaria);
 }
 
@@ -60,7 +63,7 @@ nav a {
     color: white;
     text-decoration: none;
     margin: 15px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 nav a:hover {
@@ -68,11 +71,11 @@ nav a:hover {
 }
 
 /* ========================= */
-/* BANNER */
+/* BANNER PRINCIPAL */
 /* ========================= */
 
 .banner {
-    height: 450px; /* AUMENTADO */
+    height: 600px; /* AUMENTADO BEM MAIS */
     background-image: url('fundo.jpeg');
     background-size: cover;
     background-position: center;
@@ -82,23 +85,28 @@ nav a:hover {
     align-items: center;
 }
 
-/* TEXTO DO BANNER MAIS EXPANDIDO E MAIS TRANSPARENTE */
+/* CAIXA DO TEXTO CENTRAL */
 .banner-texto {
-    background-color: rgba(0,0,0,0.4); /* MAIS TRANSPARENTE */
+    background-color: rgba(0,0,0,0.3); /* MAIS TRANSPARENTE */
     color: white;
-    padding: 40px; /* MAIS ESPAÇO */
-    border-radius: 15px;
-    width: 80%; /* MAIS EXPANDIDO */
-    max-width: 800px;
+    padding: 60px;
+    border-radius: 20px;
+    width: 85%;
+    max-width: 1000px;
+    text-align: center;
 }
 
+/* TEXTO BEM GRANDE E IMPACTANTE */
 .banner-texto h2 {
-    font-size: 32px; /* TEXTO MAIOR */
-    margin-bottom: 15px;
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
 }
 
 .banner-texto p {
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: 400;
 }
 
 /* ========================= */
@@ -131,22 +139,19 @@ nav a:hover {
 /* ========================= */
 
 .container {
-    padding: 40px;
+    padding: 50px;
     text-align: center;
 }
 
-/* ========================= */
-/* LINKS DE CONTATO */
-/* ========================= */
-
+/* LINKS */
 .container a {
     text-decoration: none;
     color: #2c3e50;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .container a:hover {
-    color: #d4ac0d;
+    color: var(--cor-destaque);
 }
 
 /* ========================= */
@@ -161,10 +166,9 @@ footer {
 }
 
 /* ========================= */
-/* BOTÕES FLUTUANTES */
+/* BOTÃO WHATSAPP */
 /* ========================= */
 
-/* WHATSAPP */
 .whatsapp-fixo {
     position: fixed;
     bottom: 20px;
@@ -172,12 +176,12 @@ footer {
     background-color: #25d366;
     color: white;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
     text-align: center;
-    font-size: 28px;
-    line-height: 60px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    font-size: 30px;
+    line-height: 65px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.4);
     text-decoration: none;
     z-index: 1000;
 }
@@ -186,41 +190,20 @@ footer {
     background-color: #1ebe5d;
 }
 
-/* INSTAGRAM (ACIMA DO WHATSAPP) */
-.instagram-fixo {
-    position: fixed;
-    bottom: 95px; /* FICA ACIMA DO WHATSAPP */
-    right: 20px;
-    background-color: #E1306C;
-    color: white;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    text-align: center;
-    font-size: 28px;
-    line-height: 60px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-    text-decoration: none;
-    z-index: 1000;
-}
-
-.instagram-fixo:hover {
-    background-color: #c72c61;
-}
-
-/* ========================= */
 /* RESPONSIVO */
-/* ========================= */
 
 @media (max-width: 768px) {
 
     .banner {
-        height: 300px;
+        height: 400px;
     }
 
-    .banner-texto {
-        width: 90%;
-        padding: 20px;
+    .banner-texto h2 {
+        font-size: 28px;
+    }
+
+    .banner-texto p {
+        font-size: 18px;
     }
 
 }
@@ -270,38 +253,36 @@ footer {
 <section id="contato" class="container">
     <h2>Contato</h2>
 
-    <!-- EMAIL COM REDIRECIONAMENTO AUTOMÁTICO -->
-    <!-- Pode alterar assunto e mensagem dentro do mailto -->
-    <p>Email: 
-        <a href="mailto:emefezequielruizii@gmail.com?subject=Contato%20pelo%20site&body=Olá,%20gostaria%20de%20mais%20informações.">
+    <!-- EMAIL ABRE NOVA MENSAGEM LIMPA -->
+    <p>Email:
+        <a href="mailto:emefezequielruizii@gmail.com">
             emefezequielruizii@gmail.com
         </a>
     </p>
 
     <p>Telefone: (92) 9224-4445</p>
 
-    <!-- INSTAGRAM NA SEÇÃO CONTATO -->
-    <p>Instagram: 
+    <!-- INSTAGRAM SOMENTE COMO LINK -->
+    <p>Instagram:
         <a href="https://www.instagram.com/emef.ezequielruizii?igsh=OXlraWN4N2JvcG1x" target="_blank">
             @emef.ezequielruizii
         </a>
     </p>
 
-    <p>Endereço: Rua Barroso, Comunidade Bela Vista, Manacapuru-AM</p>
+    <!-- ENDEREÇO COM BUSCA NO GOOGLE MAPS -->
+    <p>Endereço:
+        <a href="https://www.google.com/maps/search/?api=1&query=Rua+Barroso+Comunidade+Bela+Vista+Manacapuru-AM" target="_blank">
+            Rua Barroso, Comunidade Bela Vista, Manacapuru-AM
+        </a>
+    </p>
+
 </section>
 
 <footer>
     <p>&copy; 2026 - EMEF Ezequiel Ruiz II - Todos os direitos reservados</p>
 </footer>
 
-<!-- BOTÃO INSTAGRAM FLUTUANTE -->
-<a href="https://www.instagram.com/emef.ezequielruizii?igsh=OXlraWN4N2JvcG1x"
-   class="instagram-fixo"
-   target="_blank">
-   📷
-</a>
-
-<!-- BOTÃO WHATSAPP FLUTUANTE -->
+<!-- BOTÃO WHATSAPP -->
 <a href="https://wa.me/559292244445"
    class="whatsapp-fixo"
    target="_blank">
