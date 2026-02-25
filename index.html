@@ -6,6 +6,7 @@
 
 <title>EMEF Ezequiel Ruiz II</title>
 
+<!-- FONTE MAIS BONITA E MODERNA -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
@@ -45,6 +46,7 @@ header h1 {
 
 header p {
     color: white;
+    font-size: 18px;
 }
 
 /* ========================= */
@@ -69,14 +71,15 @@ nav a:hover {
 }
 
 /* ========================= */
-/* BANNER */
+/* BANNER PRINCIPAL */
 /* ========================= */
 
 .banner {
     height: 600px;
-    background-image: url('fundo.jpeg'); /* ALTERE AQUI A IMAGEM DE FUNDO */
+    background-image: url('fundo.jpeg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,30 +90,63 @@ nav a:hover {
     color: white;
     padding: 60px;
     border-radius: 20px;
+    width: 85%;
+    max-width: 1000px;
     text-align: center;
 }
 
 .banner-texto h2 {
     font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.banner-texto p {
+    font-size: 24px;
+    font-weight: 400;
 }
 
 /* ========================= */
-/* COLUNAS SOBRE A ESCOLA */
+/* H2 CORES SUAVES ESCOLARES */
 /* ========================= */
 
-.colunas {
+#sobre h2 {
+    background-color: #5d6d7e;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#ensino h2 {
+    background-color: #7d8f69;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#contato h2 {
+    background-color: #a89f91;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* ========================= */
+/* NOVAS COLUNAS (ADICIONADO) */
+/* ========================= */
+
+.colunas-sobre {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding: 50px;
-    background-color: white;
+    margin-top: 40px;
 }
 
 .coluna-item {
-    width: 220px;
+    width: 200px;
     text-align: center;
     padding: 20px;
-    cursor: pointer;
     transition: 0.3s;
     border-radius: 10px;
 }
@@ -120,19 +156,28 @@ nav a:hover {
     transform: translateY(-5px);
 }
 
-/* ÍCONES (VOCÊ PODE TROCAR POR IMAGENS SE QUISER) */
 .coluna-item img {
-    width: 60px; /* ALTERE O TAMANHO SE QUISER */
+    width: 60px; /* TROQUE A IMAGEM E O TAMANHO SE QUISER */
     margin-bottom: 10px;
 }
 
 /* ========================= */
-/* SEÇÕES INTERNAS */
+/* CONTEÚDO */
 /* ========================= */
 
 .container {
     padding: 50px;
     text-align: center;
+}
+
+.container a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.container a:hover {
+    color: var(--cor-destaque);
 }
 
 /* ========================= */
@@ -162,13 +207,32 @@ footer {
     text-align: center;
     font-size: 30px;
     line-height: 65px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.4);
     text-decoration: none;
+    z-index: 1000;
+}
+
+.whatsapp-fixo:hover {
+    background-color: #1ebe5d;
 }
 
 /* RESPONSIVO */
 
 @media (max-width: 768px) {
-    .colunas {
+
+    .banner {
+        height: 400px;
+    }
+
+    .banner-texto h2 {
+        font-size: 28px;
+    }
+
+    .banner-texto p {
+        font-size: 18px;
+    }
+
+    .colunas-sobre {
         flex-direction: column;
         align-items: center;
     }
@@ -181,14 +245,13 @@ footer {
 
 <header>
     <h1>EMEF Ezequiel Ruiz II</h1>
-    <p>A educação começa em casa, a escola lapida.</p>
+    <p>A educação começa em casa a escola lapida.</p>
 </header>
 
 <nav>
-    <a href="#flexibilidade">Flexibilidade</a>
-    <a href="#tradicao">Tradição</a>
-    <a href="#atividades">Atividades</a>
-    <a href="#esportes">Esportes</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#ensino">Ensino</a>
+    <a href="#contato">Contato</a>
 </nav>
 
 <section class="banner">
@@ -198,61 +261,98 @@ footer {
     </div>
 </section>
 
-<!-- ========================= -->
-<!-- COLUNAS CLICÁVEIS -->
-<!-- ========================= -->
+<section id="sobre" class="container">
+    <h2>Sobre a Escola</h2>
 
-<section class="colunas">
+    <p>
+        A EMEF Ezequiel Ruiz II é uma instituição pública comprometida
+        com a formação integral dos estudantes, promovendo educação
+        de qualidade e cidadania.
+    </p>
 
-    <!-- FLEXIBILIDADE -->
-    <a href="#flexibilidade" class="coluna-item">
-        <!-- TROQUE A IMAGEM AQUI SE QUISER -->
-        <img src="icone1.png" alt="Flexibilidade">
-        <h3>Flexibilidade</h3>
-    </a>
+    <!-- ========================= -->
+    <!-- COLUNAS ADICIONADAS -->
+    <!-- ========================= -->
+    <!-- TROQUE AS IMAGENS icone1.png etc pelos seus arquivos -->
+    <div class="colunas-sobre">
 
-    <!-- TRADIÇÃO -->
-    <a href="#tradicao" class="coluna-item">
-        <img src="icone2.png" alt="Tradição">
-        <h3>Tradição</h3>
-    </a>
+        <a href="#flexibilidade" class="coluna-item">
+            <img src="icone1.png" alt="Flexibilidade">
+            <h3>Flexibilidade</h3>
+        </a>
 
-    <!-- ATIVIDADES -->
-    <a href="#atividades" class="coluna-item">
-        <img src="icone3.png" alt="Atividades">
-        <h3>Atividades</h3>
-    </a>
+        <a href="#tradicao" class="coluna-item">
+            <img src="icone2.png" alt="Tradição">
+            <h3>Tradição</h3>
+        </a>
 
-    <!-- ESPORTES -->
-    <a href="#esportes" class="coluna-item">
-        <img src="icone4.png" alt="Esportes">
-        <h3>Esportes</h3>
-    </a>
+        <a href="#atividades" class="coluna-item">
+            <img src="icone3.png" alt="Atividades">
+            <h3>Atividades</h3>
+        </a>
 
+        <a href="#esportes" class="coluna-item">
+            <img src="icone4.png" alt="Esportes">
+            <h3>Esportes</h3>
+        </a>
+
+    </div>
 </section>
 
-<!-- ========================= -->
-<!-- ÁREAS INTERNAS -->
-<!-- ========================= -->
+<!-- ÁREAS INTERNAS NOVAS -->
 
 <section id="flexibilidade" class="container">
     <h2>Flexibilidade</h2>
-    <p>A escola oferece horários adaptáveis e projetos diferenciados para atender as necessidades dos alunos.</p>
+    <p>Conteúdo relacionado à flexibilidade da escola.</p>
 </section>
 
 <section id="tradicao" class="container">
     <h2>Tradição</h2>
-    <p>Com anos de história, a EMEF Ezequiel Ruiz II constrói uma trajetória sólida na educação pública.</p>
+    <p>Conteúdo relacionado à tradição da escola.</p>
 </section>
 
 <section id="atividades" class="container">
     <h2>Atividades</h2>
-    <p>Desenvolvemos projetos culturais, pedagógicos e sociais ao longo do ano letivo.</p>
+    <p>Conteúdo relacionado às atividades escolares.</p>
 </section>
 
 <section id="esportes" class="container">
     <h2>Esportes</h2>
-    <p>Promovemos atividades esportivas que incentivam saúde, disciplina e trabalho em equipe.</p>
+    <p>Conteúdo relacionado aos esportes oferecidos.</p>
+</section>
+
+<section id="ensino" class="container">
+    <h2>Ensino Oferecido</h2>
+    <ul>
+        <li>Ensino Fundamental I</li>
+        <li>Ensino Fundamental II</li>
+        <li>Escola de Tempo Integral</li>
+        <li>Projetos de Extensão</li>
+    </ul>
+</section>
+
+<section id="contato" class="container">
+    <h2>Contato</h2>
+
+    <p>Email:
+        <a href="mailto:emefezequielruizii@gmail.com">
+            emefezequielruizii@gmail.com
+        </a>
+    </p>
+
+    <p>Telefone: (92) 9224-4445</p>
+
+    <p>Instagram:
+        <a href="https://www.instagram.com/emef.ezequielruizii?igsh=OXlraWN4N2JvcG1x" target="_blank">
+            @emef.ezequielruizii
+        </a>
+    </p>
+
+    <p>Endereço:
+        <a href="https://www.google.com/maps/search/?api=1&query=Rua+Barroso+Comunidade+Bela+Vista+Manacapuru-AM" target="_blank">
+            Rua Barroso, Comunidade Bela Vista, Manacapuru-AM
+        </a>
+    </p>
 </section>
 
 <footer>
