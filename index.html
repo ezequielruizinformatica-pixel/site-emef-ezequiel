@@ -6,10 +6,7 @@
 
 <title>EMEF Ezequiel Ruiz II</title>
 
-<!-- FONTE MAIS BONITA E MODERNA -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-
-<!-- ÍCONES PROFISSIONAIS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -24,7 +21,6 @@
     --cor-destaque: #d4ac0d;
 }
 
-/* ANIMAÇÃO SUAVE AO ROLAR */
 html {
     scroll-behavior: smooth;
 }
@@ -79,7 +75,7 @@ nav a:hover {
 }
 
 /* ========================= */
-/* BANNER PRINCIPAL */
+/* BANNER */
 /* ========================= */
 
 .banner {
@@ -87,7 +83,6 @@ nav a:hover {
     background-image: url('fundo.jpeg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,145 +101,109 @@ nav a:hover {
 .banner-texto h2 {
     font-size: 50px;
     font-weight: 800;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
 }
 
 .banner-texto p {
     font-size: 24px;
-    font-weight: 400;
 }
 
 /* ========================= */
-/* H2 CORES SUAVES ESCOLARES */
+/* SEÇÃO INSTITUCIONAL (MODELO DA IMAGEM) */
 /* ========================= */
 
-#sobre h2 {
-    background-color: #5d6d7e;
-    color: white;
-    padding: 10px;
-    border-radius: 8px;
+.secao-video {
+    background: linear-gradient(90deg, #f7c600, #f4b400);
+    padding: 80px 10%;
 }
 
-#ensino h2 {
-    background-color: #7d8f69;
-    color: white;
-    padding: 10px;
-    border-radius: 8px;
-}
-
-#contato h2 {
-    background-color: #a89f91;
-    color: white;
-    padding: 10px;
-    border-radius: 8px;
-}
-
-/* ========================= */
-/* COLUNAS ATUALIZADAS */
-/* ========================= */
-
-.colunas-sobre {
+.video-container {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
     flex-wrap: wrap;
-    margin-top: 40px;
 }
 
-.coluna-item {
-    width: 200px;
-    text-align: center;
-    padding: 20px;
-    transition: 0.3s;
-    border-radius: 10px;
-    color: #2c3e50;
+.video-box {
+    flex: 1;
+    min-width: 300px;
 }
 
-.coluna-item i {
-    font-size: 50px; /* TAMANHO DO ÍCONE */
-    margin-bottom: 15px;
-    color: var(--cor-primaria);
+.video-box video {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-.coluna-item:hover {
-    background-color: #eaecee;
-    transform: translateY(-5px);
+.texto-video {
+    flex: 1;
+    min-width: 300px;
+    color: #1f2d3a;
 }
 
-/* ========================= */
-/* CONTEÚDO */
-/* ========================= */
-
-.container {
-    padding: 50px;
-    text-align: center;
+.texto-video h2 {
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 20px;
 }
 
-.container a {
-    text-decoration: none;
-    color: #2c3e50;
-    font-weight: 600;
+.texto-video p {
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
-.container a:hover {
-    color: var(--cor-destaque);
-}
-
-/* ========================= */
-/* RODAPÉ */
-/* ========================= */
-
-footer {
-    background-color: var(--cor-primaria);
+.botao-video {
+    display: inline-block;
+    background-color: #1f2d3a;
     color: white;
-    text-align: center;
-    padding: 15px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.botao-video:hover {
+    background-color: #000;
 }
 
 /* ========================= */
-/* BOTÃO WHATSAPP */
+/* WHATSAPP PROFISSIONAL */
 /* ========================= */
 
 .whatsapp-fixo {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366;
+    bottom: 25px;
+    right: 25px;
+    background: linear-gradient(45deg, #25d366, #128c7e);
     color: white;
     border-radius: 50%;
-    width: 65px;
-    height: 65px;
-    text-align: center;
-    font-size: 30px;
-    line-height: 65px;
-    box-shadow: 2px 2px 15px rgba(0,0,0,0.4);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
     text-decoration: none;
-    z-index: 1000;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37,211,102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37,211,102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37,211,102, 0); }
 }
 
 .whatsapp-fixo:hover {
-    background-color: #1ebe5d;
+    transform: scale(1.1);
 }
 
 /* RESPONSIVO */
 
 @media (max-width: 768px) {
-
-    .banner {
-        height: 400px;
-    }
-
-    .banner-texto h2 {
-        font-size: 28px;
-    }
-
-    .banner-texto p {
-        font-size: 18px;
-    }
-
-    .colunas-sobre {
+    .video-container {
         flex-direction: column;
-        align-items: center;
     }
 }
 
@@ -271,60 +230,36 @@ footer {
     </div>
 </section>
 
-<section id="sobre" class="container">
-    <h2>Sobre a Escola</h2>
-
-    <p>
-        A EMEF Ezequiel Ruiz II é uma instituição pública comprometida
-        com a formação integral dos estudantes, promovendo educação
-        de qualidade e cidadania.
-    </p>
-
-    <div class="colunas-sobre">
-
-        <a href="#perfil" class="coluna-item">
-            <i class="fa-solid fa-school"></i>
-            <h3>Perfil da Escola</h3>
-        </a>
-
-        <a href="#projetos" class="coluna-item">
-            <i class="fa-solid fa-diagram-project"></i>
-            <h3>Projetos</h3>
-        </a>
-
-        <a href="#galeria" class="coluna-item">
-            <i class="fa-solid fa-image"></i>
-            <h3>Galeria</h3>
-        </a>
-
-        <a href="#valores" class="coluna-item">
-            <i class="fa-solid fa-hand-holding-heart"></i>
-            <h3>Valores</h3>
-        </a>
-
-    </div>
-</section>
-
-<!-- NOVAS ÁREAS -->
-
-<section id="perfil" class="container">
-    <h2>Perfil da Escola</h2>
-    <p>Informações institucionais e histórico da escola.</p>
-</section>
-
-<section id="projetos" class="container">
-    <h2>Projetos</h2>
-    <p>Projetos pedagógicos e sociais desenvolvidos na escola.</p>
-</section>
-
-<section id="galeria" class="container">
-    <h2>Galeria</h2>
-    <p>Espaço para fotos e momentos especiais da escola.</p>
-</section>
-
 <section id="valores" class="container">
     <h2>Valores</h2>
     <p>Missão, visão e valores que norteiam a instituição.</p>
+</section>
+
+<!-- ========================= -->
+<!-- NOVA SEÇÃO COM VÍDEO -->
+<!-- ========================= -->
+
+<section class="secao-video">
+    <div class="video-container">
+
+        <div class="video-box">
+            <!-- TROQUE video.mp4 PELO SEU VÍDEO -->
+            <video id="videoInstitucional" controls>
+                <source src="video.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo.
+            </video>
+        </div>
+
+        <div class="texto-video">
+            <h2>Uma estrutura para atender todas as demandas do ambiente escolar.</h2>
+            <p>
+                Aqui sua família encontra todas as soluções para a formação educacional do seu filho, 
+                com qualidade, segurança e compromisso com o futuro.
+            </p>
+            <a href="#contato" class="botao-video">Veja mais →</a>
+        </div>
+
+    </div>
 </section>
 
 <section id="ensino" class="container">
@@ -339,26 +274,8 @@ footer {
 
 <section id="contato" class="container">
     <h2>Contato</h2>
-
-    <p>Email:
-        <a href="mailto:emefezequielruizii@gmail.com">
-            emefezequielruizii@gmail.com
-        </a>
-    </p>
-
+    <p>Email: <a href="mailto:emefezequielruizii@gmail.com">emefezequielruizii@gmail.com</a></p>
     <p>Telefone: (92) 9224-4445</p>
-
-    <p>Instagram:
-        <a href="https://www.instagram.com/emef.ezequielruizii?igsh=OXlraWN4N2JvcG1x" target="_blank">
-            @emef.ezequielruizii
-        </a>
-    </p>
-
-    <p>Endereço:
-        <a href="https://www.google.com/maps/search/?api=1&query=Rua+Barroso+Comunidade+Bela+Vista+Manacapuru-AM" target="_blank">
-            Rua Barroso, Comunidade Bela Vista, Manacapuru-AM
-        </a>
-    </p>
 </section>
 
 <footer>
@@ -366,8 +283,23 @@ footer {
 </footer>
 
 <a href="https://wa.me/559292244445" class="whatsapp-fixo" target="_blank">
-💬
+    <i class="fab fa-whatsapp"></i>
 </a>
+
+<!-- SCRIPT PARA AUTOPLAY QUANDO ENTRAR NA TELA -->
+<script>
+const video = document.getElementById('videoInstitucional');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            video.play();
+        }
+    });
+}, { threshold: 0.6 });
+
+observer.observe(video);
+</script>
 
 </body>
 </html>
