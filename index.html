@@ -9,6 +9,9 @@
 <!-- FONTE MAIS BONITA E MODERNA -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
+<!-- ÍCONES PROFISSIONAIS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 
 /* ========================= */
@@ -19,6 +22,11 @@
     --cor-primaria: #2c3e50;
     --cor-secundaria: #f4f6f7;
     --cor-destaque: #d4ac0d;
+}
+
+/* ANIMAÇÃO SUAVE AO ROLAR */
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -133,7 +141,7 @@ nav a:hover {
 }
 
 /* ========================= */
-/* NOVAS COLUNAS (ADICIONADO) */
+/* COLUNAS ATUALIZADAS */
 /* ========================= */
 
 .colunas-sobre {
@@ -149,16 +157,18 @@ nav a:hover {
     padding: 20px;
     transition: 0.3s;
     border-radius: 10px;
+    color: #2c3e50;
+}
+
+.coluna-item i {
+    font-size: 50px; /* TAMANHO DO ÍCONE */
+    margin-bottom: 15px;
+    color: var(--cor-primaria);
 }
 
 .coluna-item:hover {
     background-color: #eaecee;
     transform: translateY(-5px);
-}
-
-.coluna-item img {
-    width: 60px; /* TROQUE A IMAGEM E O TAMANHO SE QUISER */
-    margin-bottom: 10px;
 }
 
 /* ========================= */
@@ -270,55 +280,51 @@ footer {
         de qualidade e cidadania.
     </p>
 
-    <!-- ========================= -->
-    <!-- COLUNAS ADICIONADAS -->
-    <!-- ========================= -->
-    <!-- TROQUE AS IMAGENS icone1.png etc pelos seus arquivos -->
     <div class="colunas-sobre">
 
-        <a href="#flexibilidade" class="coluna-item">
-            <img src="icone1.png" alt="Flexibilidade">
-            <h3>Flexibilidade</h3>
+        <a href="#perfil" class="coluna-item">
+            <i class="fa-solid fa-school"></i>
+            <h3>Perfil da Escola</h3>
         </a>
 
-        <a href="#tradicao" class="coluna-item">
-            <img src="icone2.png" alt="Tradição">
-            <h3>Tradição</h3>
+        <a href="#projetos" class="coluna-item">
+            <i class="fa-solid fa-diagram-project"></i>
+            <h3>Projetos</h3>
         </a>
 
-        <a href="#atividades" class="coluna-item">
-            <img src="icone3.png" alt="Atividades">
-            <h3>Atividades</h3>
+        <a href="#galeria" class="coluna-item">
+            <i class="fa-solid fa-image"></i>
+            <h3>Galeria</h3>
         </a>
 
-        <a href="#esportes" class="coluna-item">
-            <img src="icone4.png" alt="Esportes">
-            <h3>Esportes</h3>
+        <a href="#valores" class="coluna-item">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+            <h3>Valores</h3>
         </a>
 
     </div>
 </section>
 
-<!-- ÁREAS INTERNAS NOVAS -->
+<!-- NOVAS ÁREAS -->
 
-<section id="flexibilidade" class="container">
-    <h2>Flexibilidade</h2>
-    <p>Conteúdo relacionado à flexibilidade da escola.</p>
+<section id="perfil" class="container">
+    <h2>Perfil da Escola</h2>
+    <p>Informações institucionais e histórico da escola.</p>
 </section>
 
-<section id="tradicao" class="container">
-    <h2>Tradição</h2>
-    <p>Conteúdo relacionado à tradição da escola.</p>
+<section id="projetos" class="container">
+    <h2>Projetos</h2>
+    <p>Projetos pedagógicos e sociais desenvolvidos na escola.</p>
 </section>
 
-<section id="atividades" class="container">
-    <h2>Atividades</h2>
-    <p>Conteúdo relacionado às atividades escolares.</p>
+<section id="galeria" class="container">
+    <h2>Galeria</h2>
+    <p>Espaço para fotos e momentos especiais da escola.</p>
 </section>
 
-<section id="esportes" class="container">
-    <h2>Esportes</h2>
-    <p>Conteúdo relacionado aos esportes oferecidos.</p>
+<section id="valores" class="container">
+    <h2>Valores</h2>
+    <p>Missão, visão e valores que norteiam a instituição.</p>
 </section>
 
 <section id="ensino" class="container">
