@@ -75,7 +75,7 @@ nav a:hover {
 }
 
 /* ========================= */
-/* BANNER */
+/* BANNER PRINCIPAL */
 /* ========================= */
 
 .banner {
@@ -83,6 +83,7 @@ nav a:hover {
     background-image: url('fundo.jpeg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,14 +102,136 @@ nav a:hover {
 .banner-texto h2 {
     font-size: 50px;
     font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
 }
 
 .banner-texto p {
     font-size: 24px;
+    font-weight: 400;
 }
 
 /* ========================= */
-/* SEÇÃO INSTITUCIONAL (MODELO DA IMAGEM) */
+/* H2 CORES SUAVES ESCOLARES */
+/* ========================= */
+
+#sobre h2 {
+    background-color: #5d6d7e;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#ensino h2 {
+    background-color: #7d8f69;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#contato h2 {
+    background-color: #a89f91;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* ========================= */
+/* COLUNAS ATUALIZADAS */
+/* ========================= */
+
+.colunas-sobre {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.coluna-item {
+    width: 200px;
+    text-align: center;
+    padding: 20px;
+    transition: 0.3s;
+    border-radius: 10px;
+    color: #2c3e50;
+}
+
+.coluna-item i {
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: var(--cor-primaria);
+}
+
+.coluna-item:hover {
+    background-color: #eaecee;
+    transform: translateY(-5px);
+}
+
+/* ========================= */
+/* CONTEÚDO */
+/* ========================= */
+
+.container {
+    padding: 50px;
+    text-align: center;
+}
+
+.container a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.container a:hover {
+    color: var(--cor-destaque);
+}
+
+/* ========================= */
+/* RODAPÉ */
+/* ========================= */
+
+footer {
+    background-color: var(--cor-primaria);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ========================= */
+/* BOTÃO WHATSAPP */
+/* ========================= */
+
+.whatsapp-fixo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, #25d366, #128c7e);
+    color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.4);
+    text-decoration: none;
+    z-index: 1000;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37,211,102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37,211,102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37,211,102, 0); }
+}
+
+.whatsapp-fixo:hover {
+    transform: scale(1.1);
+}
+
+/* ========================= */
+/* NOVA SEÇÃO VÍDEO */
 /* ========================= */
 
 .secao-video {
@@ -167,40 +290,6 @@ nav a:hover {
     background-color: #000;
 }
 
-/* ========================= */
-/* WHATSAPP PROFISSIONAL */
-/* ========================= */
-
-.whatsapp-fixo {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background: linear-gradient(45deg, #25d366, #128c7e);
-    color: white;
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 32px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-    text-decoration: none;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(37,211,102, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(37,211,102, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(37,211,102, 0); }
-}
-
-.whatsapp-fixo:hover {
-    transform: scale(1.1);
-}
-
-/* RESPONSIVO */
-
 @media (max-width: 768px) {
     .video-container {
         flex-direction: column;
@@ -230,20 +319,22 @@ nav a:hover {
     </div>
 </section>
 
+<section id="sobre" class="container">
+    <h2>Sobre a Escola</h2>
+    <p>A EMEF Ezequiel Ruiz II é uma instituição pública comprometida com a formação integral dos estudantes.</p>
+</section>
+
 <section id="valores" class="container">
     <h2>Valores</h2>
     <p>Missão, visão e valores que norteiam a instituição.</p>
 </section>
 
-<!-- ========================= -->
-<!-- NOVA SEÇÃO COM VÍDEO -->
-<!-- ========================= -->
+<!-- NOVA SEÇÃO INSERIDA AQUI -->
 
 <section class="secao-video">
     <div class="video-container">
 
         <div class="video-box">
-            <!-- TROQUE video.mp4 PELO SEU VÍDEO -->
             <video id="videoInstitucional" controls>
                 <source src="video.mp4" type="video/mp4">
                 Seu navegador não suporta vídeo.
@@ -253,7 +344,7 @@ nav a:hover {
         <div class="texto-video">
             <h2>Uma estrutura para atender todas as demandas do ambiente escolar.</h2>
             <p>
-                Aqui sua família encontra todas as soluções para a formação educacional do seu filho, 
+                Aqui sua família encontra todas as soluções para a formação educacional do seu filho,
                 com qualidade, segurança e compromisso com o futuro.
             </p>
             <a href="#contato" class="botao-video">Veja mais →</a>
@@ -286,7 +377,6 @@ nav a:hover {
     <i class="fab fa-whatsapp"></i>
 </a>
 
-<!-- SCRIPT PARA AUTOPLAY QUANDO ENTRAR NA TELA -->
 <script>
 const video = document.getElementById('videoInstitucional');
 
