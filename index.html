@@ -350,6 +350,20 @@ to{ transform:translateX(-50%); }
 100% { transform:translateX(0%); }
 }
   
+/* ========================= */
+/* ANIMAÇÃO SUAVE AO ROLAR */
+/* ========================= */
+
+.reveal{
+opacity:0;
+transform: translateY(40px);
+transition: all 0.8s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform: translateY(0);
+}
 </style>
 </head>
 
@@ -373,7 +387,7 @@ to{ transform:translateX(-50%); }
 </div>
 </section>
 
-<section id="sobre" class="container">
+<section id="sobre" class="container reveal">
 <h2>Sobre a Escola</h2>
 <p>A EMEF Ezequiel Ruiz II é uma instituição pública comprometida com a formação integral dos estudantes, promovendo educação de qualidade e cidadania.</p>
 <div class="colunas-sobre">
@@ -383,7 +397,7 @@ to{ transform:translateX(-50%); }
 <a href="#valores" class="coluna-item"><i class="fa-solid fa-hand-holding-heart"></i><h3>Valores</h3></a>
 </div>
 </section>
-  <section id="perfil" class="container">
+  <section id="perfil" class="container reveal">
 <h2>Perfil da Escola</h2>
 <p> <strong>HISTÓRICO da EMEF EZEQUIEL RUIZ II.</strong></p>
     <p>A Escola Municipal Ezequiel Ruiz II, está localizada na Comunidade
@@ -415,12 +429,12 @@ São João do Ubim e em 2011 foi desmembrada tendo a primeira gestora a professo
     </ul>   
   </section>
   
-  <section id="projetos" class="container">
+  <section id="projetos" class="container reveal">
 <h2>Projetos</h2>
 <p>Projetando o futuro kkkk.</p>
 </section>
 
-  <section id="galeria" class="container">
+  <section id="galeria" class="container reveal">
 <h2>Galeria</h2>
     <p style="margin-top:10px; color:#555; font-size:18px;">
 Momentos especiais da nossa comunidade escolar 📸
@@ -464,13 +478,13 @@ Momentos especiais da nossa comunidade escolar 📸
 
 </section>
 
-<section id="valores" class="container">
+<section id="valores" class="container reveal">
 <h2>Valores</h2>
 <p>Missão, visão e valores que norteiam a instituição.</p>
 </section>
 
 <!-- NOVA SEÇÃO ADICIONADA -->
-<section class="secao-video">
+<section class="secao-video reveal">
 <div class="video-container">
 <div class="video-box">
 <video id="videoInstitucional" controls>
@@ -486,7 +500,7 @@ Seu navegador não suporta vídeo.
 </div>
 </section>
 
-<section id="ensino" class="container">
+<section id="ensino" class="container reveal">
 <h2>Ensino Oferecido</h2>
 <ul>
 <li>Ensino Fundamental I</li>
@@ -496,7 +510,7 @@ Seu navegador não suporta vídeo.
 </ul>
 </section>
 
-<section id="contato" class="container">
+<section id="contato" class="container reveal">
 <h2>Contato</h2>
 <p>Email: <a href="mailto:emefezequielruizii@gmail.com">emefezequielruizii@gmail.com</a></p>
 <p>Telefone: (92) 9224-4445</p>
@@ -520,6 +534,30 @@ if(entry.isIntersecting){video.play();}
 });
 },{threshold:0.6});
 observer.observe(video);
+</script>
+  <script>
+
+/* ========================= */
+/* SCRIPT ANIMAÇÃO AO ROLAR */
+/* ========================= */
+
+function revealOnScroll(){
+const reveals = document.querySelectorAll('.reveal');
+
+for(let i=0;i<reveals.length;i++){
+const windowHeight = window.innerHeight;
+const elementTop = reveals[i].getBoundingClientRect().top;
+const elementVisible = 100;
+
+if(elementTop < windowHeight - elementVisible){
+reveals[i].classList.add('active');
+}
+}
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+
 </script>
 
 </body>
