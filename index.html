@@ -282,7 +282,7 @@ font-weight:600;
 /* ========================= */
 
 /* ========================= */
-/* CARROSSEL CONTÍNUO SUAVE */
+/* CARROSSEL VISUAL PREMIUM */
 /* ========================= */
 
 .slider{
@@ -292,6 +292,7 @@ overflow:hidden;
 position:relative;
 margin-top:30px;
 border-radius:15px;
+box-shadow: 0 15px 35px rgba(0,0,0,0.15); /* sombra elegante */
 }
 
 .slides{
@@ -303,28 +304,33 @@ animation:scroll 120s linear infinite;
 .slides img{
 height:500px;
 width:auto;
-margin-right:10px; /* pequeno espaço opcional */
+margin-right:15px;
 object-fit:contain;
+transition: transform 0.5s ease, opacity 0.5s ease;
+opacity:0.95;
 }
 
-/* Animação contínua real */
+/* Zoom suave */
+.slides img:hover{
+transform:scale(1.05);
+opacity:1;
+}
+
+/* Pausar ao passar o mouse */
+.slider:hover .slides{
+animation-play-state: paused;
+}
+
+/* Animação contínua */
 @keyframes scroll{
-from{
-transform:translateX(0);
-}
-to{
-transform:translateX(-50%);
-}
+from{ transform:translateX(0); }
+to{ transform:translateX(-50%); }
 }
 
 /* Ajuste celular */
 @media (max-width:768px){
-.slider{
-height:300px;
-}
-.slides img{
-height:300px;
-}
+.slider{ height:300px; }
+.slides img{ height:300px; }
 }
 @keyframes slide{
 0% { transform:translateX(0%); }
@@ -416,6 +422,9 @@ São João do Ubim e em 2011 foi desmembrada tendo a primeira gestora a professo
 
   <section id="galeria" class="container">
 <h2>Galeria</h2>
+    <p style="margin-top:10px; color:#555; font-size:18px;">
+Momentos especiais da nossa comunidade escolar 📸
+</p>
 
 <div class="slider">
   <div class="slides">
