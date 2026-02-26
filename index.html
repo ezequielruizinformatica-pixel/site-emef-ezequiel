@@ -269,47 +269,12 @@ text-decoration:none;
 font-weight:600;
 }
 
-/* ========================= */
-/* MODAL ADICIONADO */
-/* ========================= */
-
-.modal-overlay{
-position:fixed;
-inset:0;
-background:rgba(0,0,0,0.6);
-display:none;
-align-items:center;
-justify-content:center;
-z-index:9999;
-}
-
-.modal{
-background:white;
-width:90%;
-max-width:800px;
-max-height:80vh;
-overflow:auto;
-border-radius:15px;
-padding:30px;
-position:relative;
-animation:fadeIn .3s ease;
-}
-
-.modal button{
-position:absolute;
-top:10px;
-right:10px;
-background:#e74c3c;
-color:white;
-border:none;
-padding:8px 12px;
-border-radius:6px;
-cursor:pointer;
-}
-
-@keyframes fadeIn{
-from{opacity:0; transform:scale(0.9);}
-to{opacity:1; transform:scale(1);}
+@media (max-width:768px){
+.video-container{flex-direction:column;}
+.banner{height:400px;}
+.banner-texto h2{font-size:28px;}
+.banner-texto p{font-size:18px;}
+.colunas-sobre{flex-direction:column;align-items:center;}
 }
 
 </style>
@@ -317,22 +282,110 @@ to{opacity:1; transform:scale(1);}
 
 <body>
 
-<!-- TODO SEU CONTEÚDO ORIGINAL CONTINUA IGUAL AQUI -->
+<header>
+<h1>EMEF Ezequiel Ruiz II</h1>
+<p>A educação começa em casa, a escola lapida.</p>
+</header>
 
-<!-- (Mantido exatamente como você enviou) -->
+<nav>
+<a href="#sobre">Sobre</a>
+<a href="#ensino">Ensino</a>
+<a href="#contato">Contato</a>
+</nav>
 
-<!-- ... TODO O RESTANTE DO SEU HTML PERMANECE IGUAL ... -->
+<section class="banner">
+<div class="banner-texto">
+<h2>Bem-vindos à nossa Escola</h2>
+<p>Construindo conhecimento todos os dias</p>
+</div>
+</section>
 
-<!-- MODAL ADICIONADO NO FINAL -->
-<div id="modalOverlay" class="modal-overlay" onclick="fecharModal()">
-<div class="modal" onclick="event.stopPropagation()">
-<button onclick="fecharModal()">Fechar</button>
-<div id="modalConteudo"></div>
+<section id="sobre" class="container">
+<h2>Sobre a Escola</h2>
+<p>A EMEF Ezequiel Ruiz II é uma instituição pública comprometida com a formação integral dos estudantes, promovendo educação de qualidade e cidadania.</p>
+<div class="colunas-sobre">
+<a href="#perfil" class="coluna-item"><i class="fa-solid fa-school"></i><h3>Perfil da Escola</h3></a>
+<a href="#projetos" class="coluna-item"><i class="fa-solid fa-diagram-project"></i><h3>Projetos</h3></a>
+<a href="#galeria" class="coluna-item"><i class="fa-solid fa-image"></i><h3>Galeria</h3></a>
+<a href="#valores" class="coluna-item"><i class="fa-solid fa-hand-holding-heart"></i><h3>Valores</h3></a>
+</div>
+</section>
+  <section id="perfil" class="container">
+<h2>Perfil da Escola</h2>
+<p> <strong>HISTÓRICO da EMEF EZEQUIEL RUIZ II.</strong></p>
+    <p>A Escola Municipal Ezequiel Ruiz II, está localizada na Comunidade
+Nossa Senhora de Fátima, na Vila de Bela Vista, na Zona Rural do município de Manacapuru-Amazonas, margem esquerda do Rio Solimões, distante da sede (Manacapuru), cerca de 23,2 km em linha reta, com acesso também por via fluvial.
+A referida escola foi criada através do Decreto GP/PMM nº 074 de 20 de Janeiro de 2012, de acordo com o registro das Escolas Municipais junto ao Ministério da Educação - MEC. </p>
+    <p> A mesma recebeu este nome em homenagem ao grande vereador
+Ezequiel Ruiz Batista, que na década dos anos 70 dava grande assistência aos moradores da comunidade e adjacência. Em gratidão a tudo o que ele fez, os comunitários decidiram pôr o seu nome na escola que atende a maioria das crianças da comunidade.</p>
+    <p>Desde o ano de sua fundação, a escola passou por algumas adequações que ampliaram a sua estrutura, comportando todos os alunos na escola, antes havia duas salas de aula, 01 cozinha e 02 banheiros (masculino e feminino). Somente em 2012 foram construídas mais 02 salas de aula. Em 2015 mais duas salas de aula em um laboratório de informática foram construídos.</p>
+    <P>Desde o ano de sua fundação, a escola passou por algumas adequações que ampliaram a sua estrutura, comportando todos os alunos na escola, antes havia duas salas de aula, 01 cozinha e 02 banheiros (masculino e feminino). Somente em 2012 foram construídas mais 02 salas de aula. Em 2015 mais duas salas de aula em um laboratório de informática foram construídos.
+E em 2018, o grande sonho foi realizado, houve algumas adequações, no qual foi construída mais de 01 sala de aula, totalizando 07 salas de aula, 01 laboratório de informática, 01 cozinha, 01 biblioteca, 01 secretaria, 01 diretoria, 01 sala de professores e 01 refeitório. A escola recebe recursos oriundos do governo federal e municipal, como: PDDE, PNAE, PROCAE, SALÁRIO EDUCAÇÃO, ESCOLA DAS ADOLESCÊNCIAS, EDUCAÇÃO CONECTADA, EDUCAÇÃO EM TEMPO INTEGRAL e aqueles adquiridos através das promoções realizadas pela escola. Além desses recursos a escola tem parceria com instituições existentes na comunidade, comunitários, com os pais dentre outros.</P>
+    <p>No dia, 27 de junho do ano de 2024, a comunidade escolar recebe um novo prédio todo em alvenaria padrão FNDE, com 6 salas de aula, 01 diretoria. 01 sala de professores, 01 secretaria, 02 banheiros para alunos, 02 banheiros para funcionários, 01 quadra poliesportiva coberta, 01 refeitório, 01 cozinha, almoxarifado e depósitos.
+Hoje a escola atende 415 alunos, sendo 203 alunos do 1º ao 5º ano, 182 alunos de 6º ao 9º ano e 30 alunos da Educação de Jovens e Adultos
+2º Segmento 7ª Etapa. Vale ressaltar que a escola antes era anexa da EMEF
+São João do Ubim e em 2011 foi desmembrada tendo a primeira gestora a professora Edilza Santos de Oliveira, em 2012 professor Abelardo Gama Filho, de 2013 até os dias atuais, a professora Rosângela da Silva Trindade.</p>
+</section>
+  
+  <section id="projetos" class="container">
+<h2>Projetos</h2>
+<p>Projetando o futuro kkkk.</p>
+</section>
+
+  <section id="galeria" class="container">
+<h2>Galeria</h2>
+<p>nossa galera do bem .</p>
+</section>
+
+<section id="valores" class="container">
+<h2>Valores</h2>
+<p>Missão, visão e valores que norteiam a instituição.</p>
+</section>
+
+<!-- NOVA SEÇÃO ADICIONADA -->
+<section class="secao-video">
+<div class="video-container">
+<div class="video-box">
+<video id="videoInstitucional" controls>
+<source src="video.mp4" type="video/mp4">
+Seu navegador não suporta vídeo.
+</video>
+</div>
+<div class="texto-video">
+<h2>Uma estrutura para atender todas as demandas do ambiente escolar.</h2>
+<p>Aqui sua família encontra todas as soluções para a formação educacional do seu filho.</p>
+<a href="#contato" class="botao-video">Veja mais →</a>
 </div>
 </div>
+</section>
+
+<section id="ensino" class="container">
+<h2>Ensino Oferecido</h2>
+<ul>
+<li>Ensino Fundamental I</li>
+<li>Ensino Fundamental II</li>
+<li>Escola de Tempo Integral</li>
+<li>Projetos de Extensão</li>
+</ul>
+</section>
+
+<section id="contato" class="container">
+<h2>Contato</h2>
+<p>Email: <a href="mailto:emefezequielruizii@gmail.com">emefezequielruizii@gmail.com</a></p>
+<p>Telefone: (92) 9224-4445</p>
+<p>Instagram: <a href="https://www.instagram.com/emef.ezequielruizii?igsh=OXlraWN4N2JvcG1x" target="_blank">@emef.ezequielruizii</a></p>
+<p>Endereço: <a href="https://www.google.com/maps/search/?api=1&query=Rua+Barroso+Comunidade+Bela+Vista+Manacapuru-AM" target="_blank">Rua Barroso, Comunidade Bela Vista, Manacapuru-AM</a></p>
+</section>
+
+<footer>
+<p>&copy; 2026 - EMEF Ezequiel Ruiz II - Todos os direitos reservados</p>
+</footer>
+
+<a href="https://wa.me/559292244445" class="whatsapp-fixo" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
 
 <script>
-
 const video=document.getElementById('videoInstitucional');
 const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
@@ -340,31 +393,6 @@ if(entry.isIntersecting){video.play();}
 });
 },{threshold:0.6});
 observer.observe(video);
-
-/* ========================= */
-/* SCRIPT DO MODAL ADICIONADO */
-/* ========================= */
-
-document.querySelectorAll('.coluna-item').forEach(item=>{
-item.addEventListener('click',function(e){
-e.preventDefault();
-
-let destino = this.getAttribute('href') || this.querySelector('a')?.getAttribute('href');
-
-if(destino){
-let secao = document.querySelector(destino);
-if(secao){
-document.getElementById('modalConteudo').innerHTML = secao.innerHTML;
-document.getElementById('modalOverlay').style.display='flex';
-}
-}
-});
-});
-
-function fecharModal(){
-document.getElementById('modalOverlay').style.display='none';
-}
-
 </script>
 
 </body>
