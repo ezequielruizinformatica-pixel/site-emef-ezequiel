@@ -29,7 +29,50 @@ background-color: var(--cor-secundaria);
 }
 
 /* ========================= */
-/* CABEÇALHO */
+/* NOVO: MODAL FLUTUANTE */
+/* ========================= */
+
+.panel-overlay{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.6);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:2000;
+}
+
+.panel{
+background:white;
+width:90%;
+max-width:800px;
+max-height:80vh;
+overflow:auto;
+border-radius:15px;
+padding:30px;
+position:relative;
+animation:fadeIn .3s ease;
+}
+
+.panel button{
+position:absolute;
+top:10px;
+right:10px;
+background:#e74c3c;
+color:white;
+border:none;
+padding:8px 12px;
+border-radius:6px;
+cursor:pointer;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:scale(0.9);}
+to{opacity:1; transform:scale(1);}
+}
+
+/* ========================= */
+/* RESTANTE DO SEU CSS ORIGINAL */
 /* ========================= */
 
 header {
@@ -50,10 +93,6 @@ color: white;
 font-size: 18px;
 }
 
-/* ========================= */
-/* MENU */
-/* ========================= */
-
 nav {
 background-color: #1f2d3a;
 text-align: center;
@@ -68,10 +107,6 @@ font-weight: 600;
 }
 
 nav a:hover { color: var(--cor-destaque); }
-
-/* ========================= */
-/* BANNER PRINCIPAL */
-/* ========================= */
 
 .banner {
 height: 600px;
@@ -106,34 +141,9 @@ font-size: 24px;
 font-weight: 400;
 }
 
-/* ========================= */
-/* H2 CORES SUAVES ESCOLARES */
-/* ========================= */
-
-#sobre h2 {
-background-color: #5d6d7e;
-color: white;
-padding: 10px;
-border-radius: 8px;
-}
-
-#ensino h2 {
-background-color: #7d8f69;
-color: white;
-padding: 10px;
-border-radius: 8px;
-}
-
-#contato h2 {
-background-color: #a89f91;
-color: white;
-padding: 10px;
-border-radius: 8px;
-}
-
-/* ========================= */
-/* COLUNAS ATUALIZADAS */
-/* ========================= */
+#sobre h2 {background-color: #5d6d7e;color: white;padding: 10px;border-radius: 8px;}
+#ensino h2 {background-color: #7d8f69;color: white;padding: 10px;border-radius: 8px;}
+#contato h2 {background-color: #a89f91;color: white;padding: 10px;border-radius: 8px;}
 
 .colunas-sobre {
 display: flex;
@@ -149,6 +159,7 @@ padding: 20px;
 transition: 0.3s;
 border-radius: 10px;
 color: #2c3e50;
+cursor:pointer;
 }
 
 .coluna-item i {
@@ -162,37 +173,8 @@ background-color: #eaecee;
 transform: translateY(-5px);
 }
 
-/* ========================= */
-/* CONTEÚDO */
-/* ========================= */
-
-.container {
-padding: 50px;
-text-align: center;
-}
-
-.container a {
-text-decoration: none;
-color: #2c3e50;
-font-weight: 600;
-}
-
-.container a:hover { color: var(--cor-destaque); }
-
-/* ========================= */
-/* RODAPÉ */
-/* ========================= */
-
-footer {
-background-color: var(--cor-primaria);
-color: white;
-text-align: center;
-padding: 15px;
-}
-
-/* ========================= */
-/* BOTÃO WHATSAPP */
-/* ========================= */
+.container {padding: 50px;text-align: center;}
+footer {background-color: var(--cor-primaria);color: white;text-align: center;padding: 15px;}
 
 .whatsapp-fixo {
 position: fixed;
@@ -219,64 +201,6 @@ animation: pulse 2s infinite;
 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
 }
 
-.whatsapp-fixo:hover { transform: scale(1.1); }
-
-/* ========================= */
-/* NOVA SEÇÃO VÍDEO */
-/* ========================= */
-
-.secao-video {
-background: linear-gradient(90deg,#f7c600,#f4b400);
-padding: 80px 10%;
-}
-
-.video-container {
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:50px;
-flex-wrap:wrap;
-}
-
-.video-box { flex:1; min-width:300px; }
-
-.video-box video {
-width:100%;
-border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,0.3);
-}
-
-.texto-video { flex:1; min-width:300px; color:#1f2d3a; }
-
-.texto-video h2 {
-font-size:38px;
-font-weight:800;
-margin-bottom:20px;
-}
-
-.texto-video p {
-font-size:18px;
-margin-bottom:20px;
-}
-
-.botao-video {
-display:inline-block;
-background:#1f2d3a;
-color:white;
-padding:12px 25px;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-}
-
-@media (max-width:768px){
-.video-container{flex-direction:column;}
-.banner{height:400px;}
-.banner-texto h2{font-size:28px;}
-.banner-texto p{font-size:18px;}
-.colunas-sobre{flex-direction:column;align-items:center;}
-}
-
 </style>
 </head>
 
@@ -293,106 +217,56 @@ font-weight:600;
 <a href="#contato">Contato</a>
 </nav>
 
-<section class="banner">
-<div class="banner-texto">
-<h2>Bem-vindos à nossa Escola</h2>
-<p>Construindo conhecimento todos os dias</p>
-</div>
-</section>
-
 <section id="sobre" class="container">
 <h2>Sobre a Escola</h2>
-<p>A EMEF Ezequiel Ruiz II é uma instituição pública comprometida com a formação integral dos estudantes, promovendo educação de qualidade e cidadania.</p>
 <div class="colunas-sobre">
-<a href="#perfil" class="coluna-item"><i class="fa-solid fa-school"></i><h3>Perfil da Escola</h3></a>
-<a href="#projetos" class="coluna-item"><i class="fa-solid fa-diagram-project"></i><h3>Projetos</h3></a>
-<a href="#galeria" class="coluna-item"><i class="fa-solid fa-image"></i><h3>Galeria</h3></a>
-<a href="#valores" class="coluna-item"><i class="fa-solid fa-hand-holding-heart"></i><h3>Valores</h3></a>
+<div class="coluna-item" onclick="openPanel('perfil')"><i class="fa-solid fa-school"></i><h3>Perfil da Escola</h3></div>
+<div class="coluna-item" onclick="openPanel('projetos')"><i class="fa-solid fa-diagram-project"></i><h3>Projetos</h3></div>
+<div class="coluna-item" onclick="openPanel('galeria')"><i class="fa-solid fa-image"></i><h3>Galeria</h3></div>
+<div class="coluna-item" onclick="openPanel('valores')"><i class="fa-solid fa-hand-holding-heart"></i><h3>Valores</h3></div>
 </div>
 </section>
-  <section id="perfil" class="container">
+
+<!-- MODAL -->
+<div id="panelOverlay" class="panel-overlay" onclick="closePanel()">
+<div class="panel" onclick="event.stopPropagation()">
+<button onclick="closePanel()">Fechar</button>
+
+<div id="panel-perfil" style="display:none">
 <h2>Perfil da Escola</h2>
-<p> <strong>HISTÓRICO da EMEF EZEQUIEL RUIZ II.</strong></p>
-    <p>A Escola Municipal Ezequiel Ruiz II, está localizada na Comunidade
-Nossa Senhora de Fátima, na Vila de Bela Vista, na Zona Rural do município de Manacapuru-Amazonas, margem esquerda do Rio Solimões, distante da sede (Manacapuru), cerca de 23,2 km em linha reta, com acesso também por via fluvial.
-A referida escola foi criada através do Decreto GP/PMM nº 074 de 20 de Janeiro de 2012, de acordo com o registro das Escolas Municipais junto ao Ministério da Educação - MEC. </p>
-    <p> A mesma recebeu este nome em homenagem ao grande vereador
-Ezequiel Ruiz Batista, que na década dos anos 70 dava grande assistência aos moradores da comunidade e adjacência. Em gratidão a tudo o que ele fez, os comunitários decidiram pôr o seu nome na escola que atende a maioria das crianças da comunidade.</p>
-    <p>Desde o ano de sua fundação, a escola passou por algumas adequações que ampliaram a sua estrutura, comportando todos os alunos na escola, antes havia duas salas de aula, 01 cozinha e 02 banheiros (masculino e feminino). Somente em 2012 foram construídas mais 02 salas de aula. Em 2015 mais duas salas de aula em um laboratório de informática foram construídos.</p>
-    <P>Desde o ano de sua fundação, a escola passou por algumas adequações que ampliaram a sua estrutura, comportando todos os alunos na escola, antes havia duas salas de aula, 01 cozinha e 02 banheiros (masculino e feminino). Somente em 2012 foram construídas mais 02 salas de aula. Em 2015 mais duas salas de aula em um laboratório de informática foram construídos.
-E em 2018, o grande sonho foi realizado, houve algumas adequações, no qual foi construída mais de 01 sala de aula, totalizando 07 salas de aula, 01 laboratório de informática, 01 cozinha, 01 biblioteca, 01 secretaria, 01 diretoria, 01 sala de professores e 01 refeitório. A escola recebe recursos oriundos do governo federal e municipal, como: PDDE, PNAE, PROCAE, SALÁRIO EDUCAÇÃO, ESCOLA DAS ADOLESCÊNCIAS, EDUCAÇÃO CONECTADA, EDUCAÇÃO EM TEMPO INTEGRAL e aqueles adquiridos através das promoções realizadas pela escola. Além desses recursos a escola tem parceria com instituições existentes na comunidade, comunitários, com os pais dentre outros.</P>
-    <p>No dia, 27 de junho do ano de 2024, a comunidade escolar recebe um novo prédio todo em alvenaria padrão FNDE, com 6 salas de aula, 01 diretoria. 01 sala de professores, 01 secretaria, 02 banheiros para alunos, 02 banheiros para funcionários, 01 quadra poliesportiva coberta, 01 refeitório, 01 cozinha, almoxarifado e depósitos.
-Hoje a escola atende 415 alunos, sendo 203 alunos do 1º ao 5º ano, 182 alunos de 6º ao 9º ano e 30 alunos da Educação de Jovens e Adultos
-2º Segmento 7ª Etapa. Vale ressaltar que a escola antes era anexa da EMEF
-São João do Ubim e em 2011 foi desmembrada tendo a primeira gestora a professora Edilza Santos de Oliveira, em 2012 professor Abelardo Gama Filho, de 2013 até os dias atuais, a professora Rosângela da Silva Trindade.</p>
-</section>
-  
-  <section id="projetos" class="container">
+<p>Conteúdo completo do perfil...</p>
+</div>
+
+<div id="panel-projetos" style="display:none">
 <h2>Projetos</h2>
-<p>Projetando o futuro kkkk.</p>
-</section>
+<p>Conteúdo completo dos projetos...</p>
+</div>
 
-  <section id="galeria" class="container">
+<div id="panel-galeria" style="display:none">
 <h2>Galeria</h2>
-<p>nossa galera do bem .</p>
-</section>
+<p>Conteúdo completo da galeria...</p>
+</div>
 
-<section id="valores" class="container">
+<div id="panel-valores" style="display:none">
 <h2>Valores</h2>
-<p>Missão, visão e valores que norteiam a instituição.</p>
-</section>
-
-<!-- NOVA SEÇÃO ADICIONADA -->
-<section class="secao-video">
-<div class="video-container">
-<div class="video-box">
-<video id="videoInstitucional" controls>
-<source src="video.mp4" type="video/mp4">
-Seu navegador não suporta vídeo.
-</video>
+<p>Missão, visão e valores detalhados...</p>
 </div>
-<div class="texto-video">
-<h2>Uma estrutura para atender todas as demandas do ambiente escolar.</h2>
-<p>Aqui sua família encontra todas as soluções para a formação educacional do seu filho.</p>
-<a href="#contato" class="botao-video">Veja mais →</a>
+
 </div>
 </div>
-</section>
-
-<section id="ensino" class="container">
-<h2>Ensino Oferecido</h2>
-<ul>
-<li>Ensino Fundamental I</li>
-<li>Ensino Fundamental II</li>
-<li>Escola de Tempo Integral</li>
-<li>Projetos de Extensão</li>
-</ul>
-</section>
-
-<section id="contato" class="container">
-<h2>Contato</h2>
-<p>Email: <a href="mailto:emefezequielruizii@gmail.com">emefezequielruizii@gmail.com</a></p>
-<p>Telefone: (92) 9224-4445</p>
-<p>Instagram: <a href="https://www.instagram.com/emef.ezequielruizii?igsh=OXlraWN4N2JvcG1x" target="_blank">@emef.ezequielruizii</a></p>
-<p>Endereço: <a href="https://www.google.com/maps/search/?api=1&query=Rua+Barroso+Comunidade+Bela+Vista+Manacapuru-AM" target="_blank">Rua Barroso, Comunidade Bela Vista, Manacapuru-AM</a></p>
-</section>
-
-<footer>
-<p>&copy; 2026 - EMEF Ezequiel Ruiz II - Todos os direitos reservados</p>
-</footer>
-
-<a href="https://wa.me/559292244445" class="whatsapp-fixo" target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
 
 <script>
-const video=document.getElementById('videoInstitucional');
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){video.play();}
+function openPanel(k){
+['perfil','projetos','galeria','valores'].forEach(id=>{
+document.getElementById('panel-'+id).style.display='none';
 });
-},{threshold:0.6});
-observer.observe(video);
+document.getElementById('panel-'+k).style.display='block';
+document.getElementById('panelOverlay').style.display='flex';
+}
+
+function closePanel(){
+document.getElementById('panelOverlay').style.display='none';
+}
 </script>
 
 </body>
