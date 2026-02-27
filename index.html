@@ -357,6 +357,67 @@ transition: all 0.8s ease;
 opacity:1;
 transform: translateY(0);
 }
+/* ========================= */
+/* SEÇÃO PROJETOS COM IMAGENS */
+/* ========================= */
+
+.projetos-grid{
+display:grid;
+grid-template-columns: repeat(3, 1fr);
+gap:30px;
+margin-top:40px;
+justify-items:center;
+}
+
+.projeto-item{
+background:white;
+padding:15px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+transition:0.3s;
+max-width:300px;
+}
+
+.projeto-item img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.projeto-item p{
+margin-top:10px;
+font-size:14px;
+color:#555;
+}
+
+.projeto-item:hover{
+transform:translateY(-5px);
+box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Centralizar os dois últimos */
+.projeto-item:nth-child(4){
+grid-column:1/2;
+}
+
+.projeto-item:nth-child(5){
+grid-column:3/4;
+}
+
+/* Responsivo */
+@media(max-width:900px){
+.projetos-grid{
+grid-template-columns:1fr 1fr;
+}
+}
+
+@media(max-width:600px){
+.projetos-grid{
+grid-template-columns:1fr;
+}
+}
+
 </style>
 </head>
 
@@ -424,6 +485,43 @@ São João do Ubim e em 2011 foi desmembrada tendo a primeira gestora a professo
   <section id="projetos" class="container reveal">
 <h2>Projetos</h2>
 <p><strong>Com imenso orgulho, compartilhamos que foram apresentados cinco projetos da nossa escola na Feira de Matemática 2025, demonstrando o talento, a criatividade e o empenho dos nossos alunos e professores. Desses, quatro conquistaram o primeiro lugar, representando com excelência o trabalho e a dedicação de toda a nossa equipe!</strong></p>
+<section id="projetos" class="container reveal">
+<h2>Projetos</h2>
+
+<p><strong>
+Com imenso orgulho, compartilhamos que foram apresentados cinco projetos da nossa escola na Feira de Matemática 2025, demonstrando o talento, a criatividade e o empenho dos nossos alunos e professores. Desses, quatro conquistaram o primeiro lugar, representando com excelência o trabalho e a dedicação de toda a nossa equipe!
+</strong></p>
+
+<div class="projetos-grid">
+
+<div class="projeto-item">
+<img src="projeto1.jpeg" alt="Projeto 1">
+<p>Projeto 1 – Desenvolvimento de raciocínio lógico aplicado à matemática.</p>
+</div>
+
+<div class="projeto-item">
+<img src="projeto2.jpeg" alt="Projeto 2">
+<p>Projeto 2 – Aplicações práticas da matemática no cotidiano.</p>
+</div>
+
+<div class="projeto-item">
+<img src="projeto3.jpeg" alt="Projeto 3">
+<p>Projeto 3 – Construção de modelos geométricos educativos.</p>
+</div>
+
+<div class="projeto-item">
+<img src="projeto4.jpeg" alt="Projeto 4">
+<p>Projeto 4 – Matemática aplicada à sustentabilidade.</p>
+</div>
+
+<div class="projeto-item">
+<img src="projeto5.jpeg" alt="Projeto 5">
+<p>Projeto 5 – Estatística e análise de dados escolares.</p>
+</div>
+
+</div>
+
+</section>
 </section>
 
   <section id="galeria" class="container reveal">
