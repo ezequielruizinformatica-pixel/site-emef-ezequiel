@@ -460,6 +460,45 @@ background:#d4ac0d;
 margin:8px auto 0 auto;
 border-radius:2px;
 }
+/* ========================= */
+/* LIGHTBOX PROJETOS */
+/* ========================= */
+
+.lightbox{
+display:none;
+position:fixed;
+z-index:5000;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+justify-content:center;
+align-items:center;
+}
+
+.lightbox-img{
+max-width:90%;
+max-height:90%;
+border-radius:12px;
+box-shadow:0 0 40px rgba(255,255,255,0.2);
+animation:zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn{
+from{transform:scale(0.8);}
+to{transform:scale(1);}
+}
+
+.fechar{
+position:absolute;
+top:30px;
+right:40px;
+font-size:45px;
+color:white;
+cursor:pointer;
+font-weight:bold;
+}
 </style>
 </head>
 
@@ -673,6 +712,11 @@ Seu navegador não suporta vídeo.
 <a href="https://wa.me/559292244445" class="whatsapp-fixo" target="_blank">
 <i class="fab fa-whatsapp"></i>
 </a>
+  <!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+  <span class="fechar">&times;</span>
+  <img class="lightbox-img" id="img-ampliada">
+</div>
 
 <script>
 const video=document.getElementById('videoInstitucional');
@@ -705,6 +749,35 @@ reveals[i].classList.add('active');
 
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
+
+</script>
+  <script>
+
+/* ========================= */
+/* SCRIPT LIGHTBOX PROJETOS */
+/* ========================= */
+
+const imagensProjetos = document.querySelectorAll('#projetos img');
+const lightbox = document.getElementById('lightbox');
+const imgAmpliada = document.getElementById('img-ampliada');
+const fechar = document.querySelector('.fechar');
+
+imagensProjetos.forEach(img => {
+  img.addEventListener('click', () => {
+    lightbox.style.display = 'flex';
+    imgAmpliada.src = img.src;
+  });
+});
+
+fechar.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+
+lightbox.addEventListener('click', (e) => {
+  if(e.target !== imgAmpliada){
+    lightbox.style.display = 'none';
+  }
+});
 
 </script>
 
