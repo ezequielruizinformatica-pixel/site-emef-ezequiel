@@ -499,6 +499,46 @@ color:white;
 cursor:pointer;
 font-weight:bold;
 }
+/* ========================= */
+/* MODO ESCURO */
+/* ========================= */
+
+.botao-dark{
+background:none;
+border:none;
+color:white;
+font-size:20px;
+cursor:pointer;
+margin-left:20px;
+}
+
+.dark-mode{
+background:#121212;
+color:#f1f1f1;
+}
+
+.dark-mode header,
+.dark-mode nav,
+.dark-mode footer{
+background:#1e1e1e;
+}
+
+.dark-mode .container h2{
+background:linear-gradient(45deg,#333,#111);
+}
+
+.dark-mode .projeto-item{
+background:#1e1e1e;
+color:#f1f1f1;
+}
+
+.dark-mode .coluna-item{
+color:#f1f1f1;
+}
+
+.dark-mode .subtitulo-projetos{
+color:#f1f1f1;
+}
 </style>
 </head>
 
@@ -513,6 +553,10 @@ font-weight:bold;
 <a href="#sobre">Sobre</a>
 <a href="#ensino">Ensino</a>
 <a href="#contato">Contato</a>
+<button id="toggleDark" class="botao-dark">
+<i class="fa-solid fa-moon"></i>
+</button>
+
 </nav>
 
 <section class="banner">
@@ -782,6 +826,29 @@ lightbox.addEventListener('click', (e) => {
   if(e.target !== imgAmpliada){
     lightbox.style.display = 'none';
   }
+});
+
+</script>
+  <script>
+
+/* ========================= */
+/* SCRIPT MODO ESCURO */
+/* ========================= */
+
+const botaoDark = document.getElementById("toggleDark");
+
+botaoDark.addEventListener("click", () => {
+document.body.classList.toggle("dark-mode");
+
+const icone = botaoDark.querySelector("i");
+
+if(document.body.classList.contains("dark-mode")){
+icone.classList.remove("fa-moon");
+icone.classList.add("fa-sun");
+} else {
+icone.classList.remove("fa-sun");
+icone.classList.add("fa-moon");
+}
 });
 
 </script>
