@@ -569,6 +569,60 @@ color:white;
 from{transform:scale(1);}
 to{transform:scale(1.08);}
 }
+/* ========================= */
+/* CONTATO ESTILO MODERNO */
+/* ========================= */
+
+.contato-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.contato-item{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.contato-item i{
+font-size:35px;
+color:#d4ac0d;
+margin-bottom:15px;
+transition:0.3s;
+}
+
+.contato-item h3{
+margin-bottom:10px;
+}
+
+.contato-item a{
+color:#2c3e50;
+text-decoration:none;
+font-weight:600;
+}
+
+.contato-item:hover{
+transform:translateY(-5px);
+box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+.contato-item:hover i{
+transform:scale(1.2);
+}
+
+/* MODO ESCURO */
+.dark-mode .contato-item{
+background:#1e1e1e;
+color:#f1f1f1;
+}
+
+.dark-mode .contato-item a{
+color:#f1f1f1;
+}
 </style>
 </head>
 
@@ -797,10 +851,60 @@ Seu navegador não suporta vídeo.
 
 <section id="contato" class="container reveal">
 <h2>Contato</h2>
-<p>Email: <a href="mailto:emefezequielruizii@gmail.com">emefezequielruizii@gmail.com</a></p>
-<p>Telefone: (92) 9224-4445</p>
-<p>Instagram: <a href="https://www.instagram.com/emef.ezequielruizii?igsh=OXlraWN4N2JvcG1x" target="_blank">@emef.ezequielruizii</a></p>
-<p>Endereço: <a href="https://www.google.com/maps/search/?api=1&query=Rua+Barroso+Comunidade+Bela+Vista+Manacapuru-AM" target="_blank">Rua Barroso, Comunidade Bela Vista, Manacapuru-AM</a></p>
+
+<div class="contato-grid">
+
+<div class="contato-item">
+<i class="fa-solid fa-envelope"></i>
+<h3>Email</h3>
+<p>
+<a href="mailto:emefezequielruizii@gmail.com">
+emefezequielruizii@gmail.com
+</a>
+</p>
+</div>
+
+<div class="contato-item">
+<i class="fa-solid fa-phone"></i>
+<h3>Telefone</h3>
+<p>
+<a href="tel:+559292244445">
+(92) 9224-4445
+</a>
+</p>
+</div>
+
+<div class="contato-item">
+<i class="fa-brands fa-instagram"></i>
+<h3>Instagram</h3>
+<p>
+<a href="https://www.instagram.com/emef.ezequielruizii" target="_blank">
+@emef.ezequielruizii
+</a>
+</p>
+</div>
+
+<div class="contato-item">
+<i class="fa-solid fa-location-dot"></i>
+<h3>Endereço</h3>
+<p>
+Rua Barroso, Comunidade Bela Vista<br>
+Manacapuru - AM
+</p>
+</div>
+
+</div>
+
+<!-- MAPA -->
+<iframe 
+src="https://www.google.com/maps?q=Rua+Barroso+Comunidade+Bela+Vista+Manacapuru-AM&output=embed"
+width="100%" 
+height="350"
+style="border:0; border-radius:15px; margin-top:40px;"
+allowfullscreen="" 
+loading="lazy">
+</iframe>
+
 </section>
 
 <footer>
