@@ -676,6 +676,70 @@ text-align:center;
 font-size:18px;
 font-weight:600;
 }
+/* ========================= */
+/* CONTATO ESTILO MODERNO */
+/* ========================= */
+
+.contato-moderno{
+text-align:center;
+padding:60px 20px;
+}
+
+.contato-moderno p{
+font-size:18px;
+margin-bottom:30px;
+color:#555;
+}
+
+.redes-sociais{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-bottom:30px;
+}
+
+.redes-sociais a{
+width:55px;
+height:55px;
+border:2px solid #2c3e50;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+color:#2c3e50;
+text-decoration:none;
+transition:0.3s;
+}
+
+.redes-sociais a:hover{
+background:#2c3e50;
+color:white;
+transform:scale(1.1);
+}
+
+.botao-contato{
+display:inline-block;
+background:#d4ac0d;
+color:white;
+padding:14px 35px;
+border-radius:30px;
+font-size:18px;
+font-weight:600;
+text-decoration:none;
+transition:0.3s;
+margin-bottom:30px;
+}
+
+.botao-contato:hover{
+transform:scale(1.05);
+}
+
+.horario{
+margin-top:25px;
+font-size:16px;
+color:#555;
+}
 </style>
 </head>
 
@@ -932,50 +996,38 @@ Seu navegador não suporta vídeo.
 </ul>
 </section>
 
-<section id="contato" class="container reveal">
+<section id="contato" class="container contato-moderno reveal">
+
 <h2>Contato</h2>
 
-<div class="contato-grid">
+<p>Estamos sempre disponíveis para atender nossa comunidade escolar.</p>
 
-<div class="contato-item">
-<i class="fa-solid fa-envelope"></i>
-<h3>Email</h3>
-<p>
+<div class="redes-sociais">
+
 <a href="mailto:emefezequielruizii@gmail.com">
-emefezequielruizii@gmail.com
+<i class="fa-solid fa-envelope"></i>
 </a>
-</p>
-</div>
 
-<div class="contato-item">
-<i class="fa-solid fa-phone"></i>
-<h3>Telefone</h3>
-<p>
 <a href="tel:+559292244445">
-(92) 9224-4445
+<i class="fa-solid fa-phone"></i>
 </a>
-</p>
-</div>
 
-<div class="contato-item">
-<i class="fa-brands fa-instagram"></i>
-<h3>Instagram</h3>
-<p>
 <a href="https://www.instagram.com/emef.ezequielruizii" target="_blank">
-@emef.ezequielruizii
+<i class="fa-brands fa-instagram"></i>
 </a>
-</p>
+
+<a href="https://wa.me/559292244445" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
 </div>
 
-<div class="contato-item">
-<i class="fa-solid fa-location-dot"></i>
-<h3>Endereço</h3>
-<p>
-Rua Barroso, Comunidade Bela Vista<br>
-Manacapuru - AM
-</p>
-</div>
+<a href="mailto:emefezequielruizii@gmail.com" class="botao-contato">
+Entrar em contato
+</a>
 
+<div class="horario">
+⏰ Horário de funcionamento: 7h às 18h, de segunda a sexta
 </div>
 
 </section>
