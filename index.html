@@ -796,6 +796,39 @@ pointer-events:auto;
 transform:scale(1.1);
 background:#d4ac0d;
 }
+/* ========================= */
+/* SETAS GALERIA */
+/* ========================= */
+
+.seta{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.5);
+color:white;
+border:none;
+font-size:35px;
+width:50px;
+height:50px;
+cursor:pointer;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:10;
+}
+
+.seta:hover{
+background:#d4ac0d;
+}
+
+.esquerda{
+left:15px;
+}
+
+.direita{
+right:15px;
+}
 </style>
 </head>
 
@@ -988,7 +1021,10 @@ Momentos especiais da nossa comunidade escolar 📸
 </p>
 
 <div class="slider">
-  <div class="slides">
+
+<button class="seta esquerda">&#10094;</button>
+
+<div class="slides">
     <img src="foto1.jpeg" alt="Foto 1">
     <img src="foto2.jpeg" alt="Foto 2">
     <img src="foto3.jpeg" alt="Foto 3">
@@ -1019,7 +1055,11 @@ Momentos especiais da nossa comunidade escolar 📸
     <img src="foto13.jpeg" alt="Foto 13">
     <img src="foto14.jpeg" alt="Foto 14">
 
-  
+  </div>
+
+<button class="seta direita">&#10095;</button>
+
+</div>
   </div>
 </div>
 
@@ -1282,5 +1322,24 @@ botaoTopo.classList.remove("show");
 
 </script>
 
+<script>
+
+const slides = document.querySelector('.slides');
+const btnEsquerda = document.querySelector('.esquerda');
+const btnDireita = document.querySelector('.direita');
+
+let posicao = 0;
+
+btnDireita.onclick = () => {
+posicao -= 500;
+slides.style.transform = `translateX(${posicao}px)`;
+}
+
+btnEsquerda.onclick = () => {
+posicao += 500;
+slides.style.transform = `translateX(${posicao}px)`;
+}
+
+</script>
 </body>
 </html>
