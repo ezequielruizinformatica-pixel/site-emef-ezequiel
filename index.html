@@ -1000,7 +1000,7 @@ Momentos especiais da nossa comunidade escolar 📸
 <section class="secao-video reveal">
 <div class="video-container">
 <div class="video-box">
-<video id="videoInstitucional" controls>
+<video id="videoInstitucional" controls playsinline>
 <source src="video.mp4" type="video/mp4">
 Seu navegador não suporta vídeo.
 </video>
@@ -1128,12 +1128,22 @@ Entrar em contato
 </div>
 
 <script>
-const video=document.getElementById('videoInstitucional');
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){video.play();}
+const video = document.getElementById('videoInstitucional');
+
+const observer = new IntersectionObserver((entries) => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+video.play();
+}else{
+video.pause();
+}
+
 });
-},{threshold:0.6});
+
+}, { threshold: 0.6 });
+
 observer.observe(video);
 </script>
   <script>
