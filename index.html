@@ -272,7 +272,7 @@ box-shadow: 0 15px 35px rgba(0,0,0,0.15); /* sombra elegante */
 .slides{
 display:flex;
 width:max-content;
-animation:scroll 120s linear infinite;
+transition: transform 0.5s ease;
 }
 
 .slides img{
@@ -1323,21 +1323,30 @@ botaoTopo.classList.remove("show");
 </script>
 
 <script>
-
 const slides = document.querySelector('.slides');
+const imagens = document.querySelectorAll('.slides img');
 const btnEsquerda = document.querySelector('.esquerda');
 const btnDireita = document.querySelector('.direita');
 
-let posicao = 0;
+let index = 0;
+
+function atualizarSlider(){
+const largura = imagens[0].clientWidth + 15;
+slides.style.transform = `translateX(-${index * largura}px)`;
+}
 
 btnDireita.onclick = () => {
-posicao -= 500;
-slides.style.transform = `translateX(${posicao}px)`;
+if(index < imagens.length - 1){
+index++;
+}
+atualizarSlider();
 }
 
 btnEsquerda.onclick = () => {
-posicao += 500;
-slides.style.transform = `translateX(${posicao}px)`;
+if(index > 0){
+index--;
+}
+atualizarSlider();
 }
 
 </script>
