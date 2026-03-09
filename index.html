@@ -199,9 +199,6 @@ Momentos especiais da nossa comunidade escolar 📸
 </p>
 
 <div class="slider">
-
-<button class="seta esquerda">&#10094;</button>
-
 <div class="slides">
     <img src="foto1.jpeg" alt="Foto 1">
     <img src="foto2.jpeg" alt="Foto 2">
@@ -234,9 +231,6 @@ Momentos especiais da nossa comunidade escolar 📸
     <img src="foto14.jpeg" alt="Foto 14">
 
   </div>
-
-<button class="seta direita">&#10095;</button>
-
 </div>
   </div>
 </div>
@@ -497,36 +491,6 @@ botaoTopo.classList.remove("show");
 }
 
 });
-
-</script>
-
-<script>
-const slides = document.querySelector('.slides');
-const imagens = document.querySelectorAll('.slides img');
-const btnEsquerda = document.querySelector('.esquerda');
-const btnDireita = document.querySelector('.direita');
-
-let index = 0;
-
-function atualizarSlider(){
-const largura = imagens[0].clientWidth + 15;
-slides.style.transform = `translateX(-${index * largura}px)`;
-}
-
-btnDireita.onclick = () => {
-if(index < imagens.length - 1){
-index++;
-}
-atualizarSlider();
-}
-
-btnEsquerda.onclick = () => {
-if(index > 0){
-index--;
-}
-atualizarSlider();
-}
-
 </script>
 </body>
 </html>
