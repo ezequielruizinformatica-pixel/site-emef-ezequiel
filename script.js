@@ -1,4 +1,12 @@
+document.addEventListener("DOMContentLoaded", () => {
+
+/* ========================= */
+/* VIDEO AUTO PLAY */
+/* ========================= */
+
 const video = document.getElementById('videoInstitucional');
+
+if(video){
 
 const observer = new IntersectionObserver((entries) => {
 
@@ -16,15 +24,19 @@ video.pause();
 
 observer.observe(video);
 
+}
+
 
 /* ========================= */
-/* SCRIPT ANIMAÇÃO AO ROLAR */
+/* ANIMAÇÃO AO ROLAR */
 /* ========================= */
 
 function revealOnScroll(){
+
 const reveals = document.querySelectorAll('.reveal');
 
 for(let i=0;i<reveals.length;i++){
+
 const windowHeight = window.innerHeight;
 const elementTop = reveals[i].getBoundingClientRect().top;
 const elementVisible = 100;
@@ -32,7 +44,9 @@ const elementVisible = 100;
 if(elementTop < windowHeight - elementVisible){
 reveals[i].classList.add('active');
 }
+
 }
+
 }
 
 window.addEventListener('scroll', revealOnScroll);
@@ -40,7 +54,7 @@ window.addEventListener('load', revealOnScroll);
 
 
 /* ========================= */
-/* SCRIPT LIGHTBOX PROJETOS */
+/* LIGHTBOX */
 /* ========================= */
 
 const imagensProjetos = document.querySelectorAll('#projetos img');
@@ -48,22 +62,44 @@ const lightbox = document.getElementById('lightbox');
 const imgAmpliada = document.getElementById('img-ampliada');
 const fechar = document.querySelector('.fechar');
 
+if(imagensProjetos){
+
 imagensProjetos.forEach(img => {
+
 img.addEventListener('click', () => {
+
 lightbox.style.display = 'flex';
 imgAmpliada.src = img.src;
+
 });
+
 });
+
+}
+
+if(fechar){
 
 fechar.addEventListener('click', () => {
+
 lightbox.style.display = 'none';
+
 });
 
-lightbox.addEventListener('click', (e) => {
-if(e.target !== imgAmpliada){
-lightbox.style.display = 'none';
 }
+
+if(lightbox){
+
+lightbox.addEventListener('click', (e) => {
+
+if(e.target !== imgAmpliada){
+
+lightbox.style.display = 'none';
+
+}
+
 });
+
+}
 
 
 /* ========================= */
@@ -72,7 +108,10 @@ lightbox.style.display = 'none';
 
 const botaoDark = document.getElementById("toggleDark");
 
+if(botaoDark){
+
 botaoDark.addEventListener("click", () => {
+
 document.body.classList.toggle("dark-mode");
 
 const icone = botaoDark.querySelector("i");
@@ -84,14 +123,19 @@ icone.classList.add("fa-sun");
 icone.classList.remove("fa-sun");
 icone.classList.add("fa-moon");
 }
+
 });
+
+}
 
 
 /* ========================= */
-/* BOTÃO VOLTAR AO TOPO */
+/* BOTÃO TOPO */
 /* ========================= */
 
 const botaoTopo = document.getElementById("topo");
+
+if(botaoTopo){
 
 window.addEventListener("scroll", () => {
 
@@ -102,6 +146,8 @@ botaoTopo.classList.remove("show");
 }
 
 });
+
+}
 
 
 /* ========================= */
@@ -136,5 +182,7 @@ contador.innerText = valorFinal.toFixed(1);
 };
 
 atualizar();
+
+});
 
 });
