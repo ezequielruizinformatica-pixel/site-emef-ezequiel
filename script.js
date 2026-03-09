@@ -1,4 +1,3 @@
-script>
 const video = document.getElementById('videoInstitucional');
 
 const observer = new IntersectionObserver((entries) => {
@@ -16,8 +15,7 @@ video.pause();
 }, { threshold: 0.6 });
 
 observer.observe(video);
-</script>
-  <script>
+
 
 /* ========================= */
 /* SCRIPT ANIMAÇÃO AO ROLAR */
@@ -40,8 +38,6 @@ reveals[i].classList.add('active');
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
 
-</script>
-  <script>
 
 /* ========================= */
 /* SCRIPT LIGHTBOX PROJETOS */
@@ -53,27 +49,25 @@ const imgAmpliada = document.getElementById('img-ampliada');
 const fechar = document.querySelector('.fechar');
 
 imagensProjetos.forEach(img => {
-  img.addEventListener('click', () => {
-    lightbox.style.display = 'flex';
-    imgAmpliada.src = img.src;
-  });
+img.addEventListener('click', () => {
+lightbox.style.display = 'flex';
+imgAmpliada.src = img.src;
+});
 });
 
 fechar.addEventListener('click', () => {
-  lightbox.style.display = 'none';
+lightbox.style.display = 'none';
 });
 
 lightbox.addEventListener('click', (e) => {
-  if(e.target !== imgAmpliada){
-    lightbox.style.display = 'none';
-  }
+if(e.target !== imgAmpliada){
+lightbox.style.display = 'none';
+}
 });
 
-</script>
-  <script>
 
 /* ========================= */
-/* SCRIPT MODO ESCURO */
+/* MODO ESCURO */
 /* ========================= */
 
 const botaoDark = document.getElementById("toggleDark");
@@ -90,16 +84,8 @@ icone.classList.add("fa-sun");
 icone.classList.remove("fa-sun");
 icone.classList.add("fa-moon");
 }
-
 });
 
-</script>
-
-<a href="#" id="topo">
-<i class="fa-solid fa-arrow-up"></i>
-</a>
-
-<script>
 
 /* ========================= */
 /* BOTÃO VOLTAR AO TOPO */
@@ -116,7 +102,13 @@ botaoTopo.classList.remove("show");
 }
 
 });
-</script>const contadores = document.querySelectorAll(".contador");
+
+
+/* ========================= */
+/* CONTADOR IDEB */
+/* ========================= */
+
+const contadores = document.querySelectorAll(".contador");
 
 contadores.forEach(contador => {
 
