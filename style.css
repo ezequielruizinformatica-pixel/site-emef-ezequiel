@@ -69,7 +69,7 @@ nav a:hover { color: var(--cor-destaque); }
 
 .banner {
 height: 600px;
-background-image: url('fundo.jpeg');
+background-image: url('img/site/fundo.jpeg');
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
