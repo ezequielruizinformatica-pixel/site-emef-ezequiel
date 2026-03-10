@@ -151,26 +151,27 @@ botaoTopo.classList.remove("show");
 
 
 /* ========================= */
-/* CONTADOR IDEB */
+/* CONTADOR IDEB AO APARECER */
 /* ========================= */
 
 const contadores = document.querySelectorAll(".contador");
 
+function iniciarContador() {
+
 contadores.forEach(contador => {
 
-const atualizar = () => {
-
 const valorFinal = parseFloat(contador.getAttribute("data-numero"));
-let valorAtual = parseFloat(contador.innerText);
+let valorAtual = 0;
 
 const incremento = valorFinal / 60;
 
-if(valorAtual < valorFinal){
+function atualizar(){
 
 valorAtual += incremento;
 
-contador.innerText = valorAtual.toFixed(1);
+if(valorAtual < valorFinal){
 
+contador.innerText = valorAtual.toFixed(1);
 setTimeout(atualizar, 30);
 
 }else{
@@ -179,10 +180,34 @@ contador.innerText = valorFinal.toFixed(1);
 
 }
 
-};
+}
 
 atualizar();
 
 });
+
+}
+
+
+/* OBSERVADOR PARA INICIAR QUANDO APARECER */
+
+const idebSection = document.querySelector(".ideb-box");
+
+const observerIDEB = new IntersectionObserver((entries) => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+iniciarContador();
+observerIDEB.unobserve(entry.target);
+
+}
+
+});
+
+});
+
+observerIDEB.observe(idebSection);
 
 });
